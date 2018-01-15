@@ -38,7 +38,7 @@
       {
         "id": "avabodh.wireframe.calendar",
         "generator": {
-          "scriptfile": "uiwireframe/calendar_min.lua",
+          "scriptfile": "wireframe/calendar_min.lua",
           "text": "2018/12/25",
           "interprettext": true
         },
@@ -50,7 +50,7 @@
       {
         "id": "avabodh.wireframe.androiddatepicker",
         "generator": {
-          "scriptfile": "uiwireframe/android_datepicker_min.lua",
+          "scriptfile": "wireframe/android_datepicker_min.lua",
           "text": "2018/12/25",
           "interprettext": true
         },
@@ -75,7 +75,7 @@
         "default": {"width": 400, "height": 48 },
         "libraryview": {"scale": true, "width": 100, "height":48,"text":"T1,T2" },
         "generator": {
-          "scriptfile": "uiwireframe/android_tabbar_min.lua",
+          "scriptfile": "wireframe/android_tabbar_min.lua",
           "text": "Tab1,*Tab2,Tab3,Tab4",
           "interprettext": true
         },
@@ -98,7 +98,7 @@
         "default": {"width": 400, "height": 48 },
         "libraryview": {"scale": true, "width": 100, "height":48,"text":"Title" },
         "generator": {
-          "scriptfile": "uiwireframe/android_actionbar_min.lua",
+          "scriptfile": "wireframe/android_actionbar_min.lua",
           "text": "Title",
           "interprettext": true
         },
@@ -186,7 +186,7 @@
         "default": {"width": 336, "height": 184 },
         "libraryview": {"scale": true, "width": 60, "height":60,"text":"AB\nCD" },
         "generator": {
-          "scriptfile": "uiwireframe/ios_actionsheet_min.lua",
+          "scriptfile": "wireframe/ios_actionsheet_min.lua",
           "text": "Copy\nShare\nSend\nCancel",
           "interprettext": true
         },
@@ -198,7 +198,7 @@
         "default": {"width": 288, "height": 28 },
         "libraryview": {"scale": true, "width": 50, "height":28,"text":"A,B" },
         "generator": {
-          "scriptfile": "uiwireframe/ios_segmented_min.lua",
+          "scriptfile": "wireframe/ios_segmented_min.lua",
           "text": "*First,Second,Third",
           "interprettext": true
         },
@@ -209,7 +209,7 @@
         "id": "avabodh.wireframe.iosslider",
         "default": {"width": 128, "height": 16 },
         "generator": {
-          "scriptfile": "uiwireframe/slider_min.lua"
+          "scriptfile": "wireframe/slider_min.lua"
         },
         "name": "Slider",
         "params": {
@@ -290,7 +290,7 @@
       {
         "id": "avabodh.wireframe.iospagecontrol",
         "generator": {
-          "scriptfile": "uiwireframe/ios_pagecontrol_min.lua",
+          "scriptfile": "wireframe/ios_pagecontrol_min.lua",
           "interprettext": false
         },
         "libraryview": {"scale": true, "height": 12, "width": 72 },
@@ -306,7 +306,7 @@
       {
         "id": "avabodh.wireframe.ioscontextmenu",
         "generator": {
-          "scriptfile": "uiwireframe/ios_contextmenu_min.lua",
+          "scriptfile": "wireframe/ios_contextmenu_min.lua",
           "text": "*Select All,Copy,Paste",
           "interprettext": true
         },
@@ -513,7 +513,7 @@
       {
         "id": "avabodh.wireframe.tooltip",
         "generator": {
-          "scriptfile": "uiwireframe/tooltip_min.lua",
+          "scriptfile": "wireframe/tooltip_min.lua",
           "text": "Tooltip text",
           "interprettext": true
         },
@@ -718,7 +718,7 @@
         "id": "avabodh.wireframe.slider",
         "default": {"width": 128, "height": 16 },
         "generator": {
-          "scriptfile": "uiwireframe/slider_min.lua"
+          "scriptfile": "wireframe/slider_min.lua"
         },
         "name": "Slider",
         "params": {
@@ -731,7 +731,7 @@
         "id": "avabodh.wireframe.vslider",
         "default": {"width": 16, "height": 128 },
         "generator": {
-          "scriptfile": "uiwireframe/vslider_min.lua"
+          "scriptfile": "wireframe/vslider_min.lua"
         },
         "name": "V Slider",
         "params": {
@@ -824,7 +824,7 @@
       {
         "id": "avabodh.wireframe.pointybutton",
         "generator": {
-          "scriptfile": "uiwireframe/pointy_button_min.lua",
+          "scriptfile": "wireframe/pointy_button_min.lua",
           "text": "Button",
           "interprettext": true
         },
@@ -898,7 +898,7 @@
       {
         "id": "avabodh.wireframe.multilinebutton",
         "generator": {
-          "scriptfile": "uiwireframe/multiline_button_min.lua",
+          "scriptfile": "wireframe/multiline_button_min.lua",
           "text": "Multiline Button\nsecond line of text",
           "interprettext": true
         },
@@ -959,7 +959,7 @@
         "id": "avabodh.wireframe.listbox",
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/listbox_min.lua",
+          "scriptfile": "wireframe/listbox_min.lua",
           "text": "first item\n-disabled item\n*selected item\nanother item",
           "interprettext": true
         },
@@ -976,7 +976,7 @@
         "id": "avabodh.wireframe.button",
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/button_min.lua",
+          "scriptfile": "wireframe/button_min.lua",
           "text": "Button",
           "interprettext": true
         },
@@ -995,7 +995,7 @@
         "id": "avabodh.wireframe.buttonbar",
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/button_bar_min.lua",
+          "scriptfile": "wireframe/button_bar_min.lua",
           "text": "One,*Two,Three",
           "interprettext": true
         },
@@ -1008,7 +1008,7 @@
         "id": "avabodh.wireframe.menubar",
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/menu_bar_min.lua",
+          "scriptfile": "wireframe/menu_bar_min.lua",
           "text": "File,*Edit,-Window,Help",
           "interprettext": true
         },
@@ -1021,7 +1021,7 @@
         "id": "avabodh.wireframe.checkbox",
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/checkbox_min.lua",
+          "scriptfile": "wireframe/checkbox_min.lua",
           "text": "checkbox",
           "interprettext": true
         },
@@ -1038,7 +1038,7 @@
         "id": "avabodh.wireframe.radiobutton",
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/radio_button_min.lua",
+          "scriptfile": "wireframe/radio_button_min.lua",
           "text": "radio button",
           "interprettext": true
         },
@@ -1072,7 +1072,7 @@
         "style":{"strokewidth":2.0},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/checkbox_group_min.lua",
+          "scriptfile": "wireframe/checkbox_group_min.lua",
           "text": "[ ]not selected\n[x]selected\n[-]indeterminate\n-[ ]disabled\n-[x]disabled selected\n-[-]disabled indeterminate\nA row without a checkbox",
           "interprettext": true
         }
@@ -1085,7 +1085,7 @@
         "style":{"strokewidth":2.0},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/radiobutton_group_min.lua",
+          "scriptfile": "wireframe/radiobutton_group_min.lua",
           "text": "[O]option 1 (selected)\n[( )]option2\n-[O]option 3 (selected and disabled)\n-[( )]option 4 (disabled)\nA row without radio button",
           "interprettext": true
         }
@@ -1098,7 +1098,7 @@
         "style":{"strokewidth":1.5},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/menu_min.lua",
+          "scriptfile": "wireframe/menu_min.lua",
           "text": "Open,CTRL+O\n*Open Recent,>\n---\n[O]Option One\nOption Two\n=\n[x]Toggle Item\n-Disabled Item\nExit,CTRL+Q",
           "interprettext": true
         }
@@ -1111,7 +1111,7 @@
         "style":{"strokewidth":1.5},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/ios_menu_min.lua",
+          "scriptfile": "wireframe/ios_menu_min.lua",
           "text": "A text menu without icon\n[+]Add an Item[>]\n[-]Delete an item\n*Selected item,OK\n-Disabled Item\n[x]Checkmark\n[O]Bullet item\nOn Button[on]\nOff Button[off]\n\n   Another item with spaces",
           "interprettext": true
         },
@@ -1129,7 +1129,7 @@
         "style":{"strokewidth":1.5},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/tree_min.lua",
+          "scriptfile": "wireframe/tree_min.lua",
           "text": "[folder]Item with closed folder icon\n[folder-open]Item with open folder icon\n[file]Item with file icon\n[+]You may also use this\n[-]and this\nor this\n[>]or even this\n[v]and this\n-[+]disabled tree item\n*[-]selected tree item\n [-]Add space for hierarchy\n  [+]another level of hierarchy",
           "interprettext": true
         },
@@ -1145,7 +1145,7 @@
         "style":{"strokewidth":1.5},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/datagrid_min.lua",
+          "scriptfile": "wireframe/datagrid_min.lua",
           "text": "ID,Name & Job Title[V],Age,Nickname,Option\n1,Name 1\\nCEO,40,nick1,[O]\n2,Name 2\\nCTO,39,nick2,[X]\n*3,Name 3\\nEngineer,32,nick3,[-]\n4,Name 4\\nEngineer,35,nick4,[]\n{0C, 45L, 0R, 15L, 0C}",
           "interprettext": true
         },
@@ -1164,7 +1164,7 @@
         "style":{"strokewidth":1.5},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/ios_picker_min.lua",
+          "scriptfile": "wireframe/ios_picker_min.lua",
           "text": "7,59\n8,00\n9,01,PM\n10,02,AM\n11,03\n12,04\n1,05",
           "interprettext": true
         },
@@ -1180,7 +1180,7 @@
         "style":{"strokewidth":1.5,"textfill":{"color":-16776961, "type":2}, "textdecoration": 2},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/link_bar_min.lua",
+          "scriptfile": "wireframe/link_bar_min.lua",
           "text": "Home,Product,Blog,Contact",
           "interprettext": true
         },
@@ -1196,7 +1196,7 @@
         "style":{"strokewidth":1.5,"textdecoration": 2, "textfill":{"color":-16776961, "type":2}},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/breadcrumbs_min.lua",
+          "scriptfile": "wireframe/breadcrumbs_min.lua",
           "text": "Home,Product,Features",
           "interprettext": true
         }
@@ -1205,7 +1205,7 @@
         "id": "avabodh.wireframe.tabshead",
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/tabbar_min.lua",
+          "scriptfile": "wireframe/tabbar_min.lua",
           "text": "Home,*Products,About,Contact",
           "interprettext": true
         },
@@ -1225,7 +1225,7 @@
         "style":{"strokewidth":1.5},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/tabs_min.lua",
+          "scriptfile": "wireframe/tabs_min.lua",
           "text": "*One,Two,Three",
           "interprettext": true
         },
@@ -1242,7 +1242,7 @@
         "style":{"strokewidth":1.5},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/vtabs_min.lua",
+          "scriptfile": "wireframe/vtabs_min.lua",
           "text": "*One\nTwo\nThree",
           "interprettext": true
         },
@@ -1269,7 +1269,7 @@
         "style":{"strokewidth":1.5, "textalignhorizontal": 2},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/accordion_min.lua",
+          "scriptfile": "wireframe/accordion_min.lua",
           "text": "Item One\n*Item Two\nItem Three\nItem Four",
           "interprettext": true
         }
@@ -1282,7 +1282,7 @@
         "style":{"strokewidth":1.5},
         "generator": {
           "script": "",
-          "scriptfile": "uiwireframe/popover_min.lua"
+          "scriptfile": "wireframe/popover_min.lua"
         },
         "params": {
            "position": { "value": 0.2, "editor": {"type": 2, "min": 0.0, "max": 1.0}},
