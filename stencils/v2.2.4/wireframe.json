@@ -452,6 +452,7 @@
         "generator": {
           "scriptfile": "wireframe/calendar_min.lua",
           "text": "2018/12/25",
+          "embedrefs": ["avabodh.wireframe.icon_chevron-left", "avabodh.wireframe.icon_chevron-right"],
           "interprettext": true
         },
         "name": "Calendar",
@@ -465,6 +466,7 @@
         "generator": {
           "scriptfile": "wireframe/android_datepicker_min.lua",
           "text": "2018/12/25",
+          "embedrefs": ["avabodh.wireframe.icon_chevron-left", "avabodh.wireframe.icon_chevron-right"],
           "interprettext": true
         },
         "name": "Date Picker",
@@ -517,6 +519,7 @@
         "generator": {
           "scriptfile": "wireframe/android_actionbar_min.lua",
           "text": "Title",
+          "embedrefs": ["avabodh.wireframe.icon_bars", "avabodh.wireframe.icon_chevron-left", "avabodh.wireframe.icon_ellipsis-v"],
           "interprettext": true
         },
         "params": {
@@ -1283,6 +1286,7 @@
         "generator": {
           "scriptfile": "wireframe/pointy_button_min.lua",
           "text": "Button",
+          "embedrefs": ["avabodh.wireframe.icon_angle-right", "avabodh.wireframe.icon_angle-left"],
           "interprettext": true
         },
         "params": {
@@ -1436,7 +1440,7 @@
            "min item height": { "value": 25, "editor": { "type": 1, "min":5, "max":1000 }},
            "border": {"value": true }
         },
-        "help": "&bull; Double tap on the shape to change list box<br/>&bull; Each line of the text is a list item<br/>&bull; Selected list item starts with *<br/>&bull; Disabled list item starts with -<br/>&bull; If a list item has to start with * then while editing the list item, start it with \\*<br/>&bull; If a list item has to start with - then while editing the list item, start it with \\-<br/>&bull; If a list item has to start with a icon then while editing the list item text, start it with [icon_name] where icon_name is a font awesome icon name e.g [folder], [file] etc"
+        "help": "&bull; Double tap on the shape to change list box<br/>&bull; Each line of the text is a list item<br/>&bull; Selected list item starts with *<br/>&bull; Disabled list item starts with -<br/>&bull; If a list item has to start with * then while editing the list item, start it with \\*<br/>&bull; If a list item has to start with - then while editing the list item, start it with \\-"
       },
       {
         "id": "avabodh.wireframe.button",
@@ -1491,6 +1495,7 @@
           "script": "",
           "scriptfile": "wireframe/checkbox_min.lua",
           "text": "checkbox",
+          "embedrefs": ["avabodh.wireframe.icon_square-o", "avabodh.wireframe.icon_check-square-o"],
           "interprettext": true
         },
         "default": {"width": 88, "height": 24 },
@@ -1507,6 +1512,7 @@
         "generator": {
           "script": "",
           "scriptfile": "wireframe/radio_button_min.lua",
+          "embedrefs": ["avabodh.wireframe.icon_circle-o", "avabodh.wireframe.icon_dot-circle-o"],
           "text": "radio button",
           "interprettext": true
         },
@@ -1542,6 +1548,7 @@
           "script": "",
           "scriptfile": "wireframe/checkbox_group_min.lua",
           "text": "[ ]not selected\n[x]selected\n[-]indeterminate\n-[ ]disabled\n-[x]disabled selected\n-[-]disabled indeterminate\nA row without a checkbox",
+          "embedrefs": ["avabodh.wireframe.icon_square-o", "avabodh.wireframe.icon_check-square-o", "avabodh.wireframe.icon_minus-square-o"],
           "interprettext": true
         },
         "help": "&bull; Double tap on the shape to change the check box group<br/>&bull; Each line of text is a check box item<br/>&bull; Checked item starts with [x]<br/>&bull; Un-checked items starts with [ ]<br/>&bull; Indeterminate items starts with[-]<br/>&bull; Disabled item starts with -"
@@ -1556,6 +1563,7 @@
           "script": "",
           "scriptfile": "wireframe/radiobutton_group_min.lua",
           "text": "[O]option 1 (selected)\n[( )]option2\n-[O]option 3 (selected and disabled)\n-[( )]option 4 (disabled)\nA row without radio button",
+          "embedrefs": ["avabodh.wireframe.icon_circle-o", "avabodh.wireframe.icon_dot-circle-o", "avabodh.wireframe.icon_minus-circle"],
           "interprettext": true
         },
         "help": "&bull; Double tap on the shape to change the radio button group<br/>&bull; Each line of text is a radio button<br/>&bull; Selected radio button starts with [O]<br/>&bull; Unselected radio button starts with [( )]<br/>&bull; Disabled radio button starts with -"
@@ -1570,6 +1578,7 @@
           "script": "",
           "scriptfile": "wireframe/menu_min.lua",
           "text": "Open,CTRL+O\n*Open Recent,>\n---\n[O]Option One\nOption Two\n=\n[x]Toggle Item\n-Disabled Item\nExit,CTRL+Q",
+          "embedrefs": ["avabodh.wireframe.icon_circle", "avabodh.wireframe.icon_check"],
           "interprettext": true
         },
         "help": "&bull; Double tap to edit the menu<br/>&bull; Each line represent a menu item<br/>&bull; If a line is --- or = that means that is a separator line<br/>&bull; Selected menu item starts with *<br/>&bull; Disabled menu item starts with -<br/>&bull; A menu item can optionally starts with these icons: checked ([x]), dot ([O])<br/>&bull; A menu item can have text on right side. The right side text is separated by comma from the left side text. For example Open,CTRL+O mean left side text is Open and right side text is CTRL+O. Comma can be escaped as \\, in case the left side text needs to have comma"
@@ -1583,7 +1592,8 @@
         "generator": {
           "script": "",
           "scriptfile": "wireframe/ios_menu_min.lua",
-          "text": "A text menu without icon\n[+]Add an Item[>]\n[-]Delete an item\n*Selected item,OK\n-Disabled Item\n[x]Checkmark\n[O]Bullet item\nOn Button[on]\nOff Button[off]\n\n   Another item with spaces",
+          "embedrefs": ["avabodh.wireframe.icon_circle", "avabodh.wireframe.icon_check", "avabodh.wireframe.icon_plus-circle", "avabodh.wireframe.icon_minus-circle", "avabodh.wireframe.icon_chevron-right", "avabodh.wireframe.icon_toggle-off", "avabodh.wireframe.icon_toggle-on", "avabodh.wireframe.icon_bars"],
+          "text": "A text menu without icon\n[+]Add an Item[>]\n[-]Delete an item\n*Selected item,OK\n-Disabled Item[=]\n[x]Checkmark\n[O]Bullet item\nOn Button[on]\nOff Button[off]\n\n   Another item with spaces",
           "interprettext": true
         },
         "params": {
@@ -1591,7 +1601,7 @@
            "corner radius": { "value": 1, "editor": { "type": 1, "min":1, "max":1000 }},
            "border": {"value": true }
          },
-        "help": "&bull; Double tap to edit the menu<br/>&bull; Each line represent a menu item<br/>&bull; Selected menu item starts with *<br/>&bull; Disabled menu item starts with -<br/>&bull; If menu text has to start with * or - then it should be escaped as \\* or \\-<br/>&bull; A menu item can optionally starts with one of these icons: checked ([x]), dot ([O]), add ([+]), remove([-])<br/>&bull; A menu item can optionally ends with one of these icons: on([on]), off([off]), detail indicator([>])<br/>&bull; A menu item can have text on right side. The right side text is separated by comma from the left side text. For example SomeText,OK mean left side text is SomeText and right side text is OK. Comma can be escaped as \\, in case the left side text needs to have comma",
+        "help": "&bull; Double tap to edit the menu<br/>&bull; Each line represent a menu item<br/>&bull; Selected menu item starts with *<br/>&bull; Disabled menu item starts with -<br/>&bull; If menu text has to start with * or - then it should be escaped as \\* or \\-<br/>&bull; A menu item can optionally starts with one of these icons: checked ([x]), dot ([O]), add ([+]), remove([-])<br/>&bull; A menu item can optionally ends with one of these icons: on([on]), off([off]), detail indicator([>]), bars([=])<br/>&bull; A menu item can have text on right side. The right side text is separated by comma from the left side text. For example SomeText,OK mean left side text is SomeText and right side text is OK. Comma can be escaped as \\, in case the left side text needs to have comma",
         "aliases": "Table"
       },
       {
@@ -1604,12 +1614,13 @@
           "script": "",
           "scriptfile": "wireframe/tree_min.lua",
           "text": "[folder]Item with closed folder icon\n[folder-open]Item with open folder icon\n[file]Item with file icon\n[+]You may also use this\n[-]and this\nor this\n[>]or even this\n[v]and this\n-[+]disabled tree item\n*[-]selected tree item\n [-]Add space for hierarchy\n  [+]another level of hierarchy",
+          "embedrefs": ["avabodh.wireframe.icon_plus-square-o", "avabodh.wireframe.icon_minus-square-o", "avabodh.wireframe.icon_caret-right", "avabodh.wireframe.icon_caret-down", "avabodh.wireframe.icon_folder", "avabodh.wireframe.icon_folder-open", "avabodh.wireframe.icon_file"],
           "interprettext": true
         },
         "params": {
            "border": {"value": true }
         },
-        "help": "&bull; Double tap to edit the tree<br/>&bull; Each line represent a tree item<br/>&bull; Selected tree item starts with *<br/>&bull; Disabled tree item starts with -<br/>&bull; A tree item can optionally starts with these icons: [+], [-], [folder], [folder-open], [file], [>], [v] and [icon_name] where icon_name is a font awesome icon name<br/>&bull; For nested tree item or hierarchical  tree item, start the tree item with space (or spaces for multi level nesting)"
+        "help": "&bull; Double tap to edit the tree<br/>&bull; Each line represent a tree item<br/>&bull; Selected tree item starts with *<br/>&bull; Disabled tree item starts with -<br/>&bull; A tree item can optionally starts with these icons: [+], [-], [folder], [folder-open], [file], [>] and [v]<br/>&bull; For nested tree item or hierarchical  tree item, start the tree item with space (or spaces for multi level nesting)"
       },
       {
         "id": "avabodh.wireframe.datagrid",
@@ -1621,6 +1632,7 @@
           "script": "",
           "scriptfile": "wireframe/datagrid_min.lua",
           "text": "ID,Name & Job Title[V],Age,Nickname,Option\n1,Name 1\\nCEO,40,nick1,[O]\n2,Name 2\\nCTO,39,nick2,[X]\n*3,Name 3\\nEngineer,32,nick3,[-]\n4,Name 4\\nEngineer,35,nick4,[]\n{0C, 45L, 0R, 15L, 0C}",
+          "embedrefs": ["avabodh.wireframe.icon_square-o", "avabodh.wireframe.icon_check-square-o", "avabodh.wireframe.icon_minus-square-o", "avabodh.wireframe.icon_dot-circle-o", "avabodh.wireframe.icon_circle-o", "avabodh.wireframe.icon_chevron-down", "avabodh.wireframe.icon_chevron-up"],
           "interprettext": true
         },
         "params": {
@@ -1629,8 +1641,8 @@
            "min row height": { "value": 20, "editor": { "type": 1, "min":5, "max":1000 }},
            "border": {"value": true }
         },
-        "help": "&bull; While editing the text on double tap:<br/>&bull; Each line of text represent a row<br/>&bull; Each line has one or more grid cells which are separated by comma<br/>&bull; Selected row starts with *<br/>&bull; A cell can be disabled if it starts with -<br/>&bull; A cell can contains icon as [+], [-], [v], [O], [( )], [ ], [x] or [icon_name] where icon_name is a font awesome icon name<br/>&bull; A cell can be multi line by separating lines by \\n<br/>&bull; The last line is for column width. The column with is specified as Number and Align e.g. 12C. The alignments are L: Left, C: center, R: right. The zero width means width to fit the text. Otherwise the width number specifies the ratio. For example if a column has width 15 and other has 55, that means the width ratio of these two columns are 15:55",
-        "aliases": "Table,Sheet"
+        "help": "&bull; While editing the text on double tap:<br/>&bull; Each line of text represent a row<br/>&bull; Each line has one or more grid cells which are separated by comma<br/>&bull; Selected row starts with *<br/>&bull; A cell can be disabled if it starts with -<br/>&bull; A cell can contains icon from one of these: [+], [-], [v], [O], [( )], [ ], [x]<br/>&bull; A cell can be multi line by separating lines by \\n<br/>&bull; The last line is for column width. The column with is specified as Number and Align e.g. 12C. The alignments are L: Left, C: center, R: right. The zero width means width to fit the text. Otherwise the width number specifies the ratio. For example if a column has width 15 and other has 55, that means the width ratio of these two columns are 15:55",
+        "aliases": "Table,Sheet,DataGrid"
       },
       {
         "id": "avabodh.wireframe.iospicker",
@@ -1675,6 +1687,7 @@
           "script": "",
           "scriptfile": "wireframe/breadcrumbs_min.lua",
           "text": "Home,Product,Features",
+          "embedrefs": [ "avabodh.wireframe.icon_chevron-right"],
           "interprettext": true
         }
       },
