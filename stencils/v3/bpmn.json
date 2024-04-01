@@ -2,7 +2,7 @@
   "library": [
     {
       "name": "BMPN 2.0",
-      "id": "avabodh.bpmn.syms",
+      "id": "avabodh.bpmn",
       "category": "BPMN",
       "group": "Business",
       "objects": [
