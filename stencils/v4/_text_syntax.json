@@ -1,0 +1,499 @@
+{
+  "avabodh.wireframe.accordion": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "*-item",
+        "means": "selected and disabled; -* is the same"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * or - at the start of the item"
+      }
+    ],
+    "note": "Each line is one section header; the first line marked with * is the open section and every line after it is stacked at the bottom of the shape.",
+    "example": "Item One\n*Item Two\nItem Three\nItem Four"
+  },
+  "avabodh.wireframe.androidactionbar": {
+    "separator": "none",
+    "markers": [],
+    "note": "The whole text is the action bar's title; the leading icon and the overflow button are template parameters, not text.",
+    "example": "Title"
+  },
+  "avabodh.wireframe.androiddatepicker": {
+    "separator": "slash",
+    "markers": [],
+    "note": "Three slash-separated numbers, year/month/day; the weekday and the month name are computed from them, and an out-of-range month or day falls back to a valid one.",
+    "example": "2018/12/25"
+  },
+  "avabodh.wireframe.androidtabbar": {
+    "separator": "comma",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * at the start of the item"
+      },
+      {
+        "syntax": "\\n",
+        "means": "a line break inside the item"
+      }
+    ],
+    "note": "Each comma-separated item is one tab; \\n gives a tab a second line.",
+    "example": "Tab1,*Tab2,Tab3,Tab4"
+  },
+  "avabodh.wireframe.breadcrumbs": {
+    "separator": "comma",
+    "markers": [
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "\\-item",
+        "means": "a literal - at the start of the item"
+      }
+    ],
+    "note": "Each comma-separated item is one crumb, with the arrow between crumbs drawn for you; the last crumb is styled as the current page.",
+    "example": "Home,Product,Features"
+  },
+  "avabodh.wireframe.button": {
+    "separator": "none",
+    "markers": [],
+    "note": "The whole text is the button's label; the state (normal, in focus, selected), the icon and the menu arrow are template parameters, not text.",
+    "example": "Button"
+  },
+  "avabodh.wireframe.buttonbar": {
+    "separator": "comma",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * at the start of the item"
+      },
+      {
+        "syntax": "\\n",
+        "means": "a line break inside the item"
+      }
+    ],
+    "note": "Each comma-separated item is one button in the bar; \\n gives a button a second line.",
+    "example": "One,*Two,Three"
+  },
+  "avabodh.wireframe.calendar": {
+    "separator": "slash",
+    "markers": [],
+    "note": "Three slash-separated numbers, year/month/day; the month grid, the weekday and the month name are computed from them, and an out-of-range month or day falls back to a valid one.",
+    "example": "2018/12/25"
+  },
+  "avabodh.wireframe.checkbox": {
+    "separator": "none",
+    "markers": [],
+    "note": "The whole text is the label beside the box; checked and the state are template parameters, not text.",
+    "example": "checkbox"
+  },
+  "avabodh.wireframe.checkboxgroup": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "[icon]item",
+        "means": "leading icon, by icon name"
+      },
+      {
+        "syntax": "\\-item",
+        "means": "a literal - at the start of the item"
+      }
+    ],
+    "note": "Each line is one row: [ ] draws an empty box, [x] a checked one and [-] an indeterminate one, and a line with no leading bracket is a plain label with no box.",
+    "example": "[ ]not selected\n[x]selected\n[-]indeterminate\n-[ ]disabled\n-[x]disabled selected\n-[-]disabled indeterminate\nA row without a checkbox"
+  },
+  "avabodh.wireframe.datagrid": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "cell,cell",
+        "means": "a comma starts the next column; the markers below apply per cell"
+      },
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "*-item",
+        "means": "selected and disabled; -* is the same"
+      },
+      {
+        "syntax": "[icon]item",
+        "means": "leading icon, by icon name"
+      },
+      {
+        "syntax": "item[icon]",
+        "means": "trailing icon, by icon name"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * or - at the start of the item"
+      },
+      {
+        "syntax": "\\n",
+        "means": "a line break inside the item"
+      }
+    ],
+    "note": "The first line is the header row and each comma starts a column; [v] or [^] at the END of a header cell draws a sort chevron, [ ] [x] [-] [o] [()] at the START of a cell draw check and radio marks, and a line of the form {0C, 45L, 0R} anywhere in the text sets each column's width and alignment (L, C or R; 0 means share the remaining width).",
+    "example": "ID,Name & Job Title[V],Age,Nickname,Option\n1,Name 1\\nCEO,40,nick1,[O]\n2,Name 2\\nCTO,39,nick2,[X]\n*3,Name 3\\nEngineer,32,nick3,[-]\n4,Name 4\\nEngineer,35,nick4,[]\n{0C, 45L, 0R, 15L, 0C}"
+  },
+  "avabodh.wireframe.iosactionsheet": {
+    "separator": "newline",
+    "markers": [],
+    "note": "Each line is one button and the LAST line is drawn as the separated Cancel button; a single line is drawn as one button with no sheet.",
+    "example": "Copy\nShare\nSend\nCancel"
+  },
+  "avabodh.wireframe.ioscontextmenu": {
+    "separator": "comma",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * at the start of the item"
+      },
+      {
+        "syntax": "\\n",
+        "means": "a line break inside the item"
+      }
+    ],
+    "note": "Each comma-separated item is one entry in the floating bar, with a divider drawn between entries.",
+    "example": "*Select All,Copy,Paste"
+  },
+  "avabodh.wireframe.iosmenu": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "*-item",
+        "means": "selected and disabled; -* is the same"
+      },
+      {
+        "syntax": "[icon]item",
+        "means": "leading icon, by icon name"
+      },
+      {
+        "syntax": "item[icon]",
+        "means": "trailing icon, by icon name"
+      },
+      {
+        "syntax": "item,suffix",
+        "means": "right-aligned trailing text"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * or - at the start of the item"
+      },
+      {
+        "syntax": "\\n",
+        "means": "a line break inside the item"
+      }
+    ],
+    "note": "Each line is one row, with a divider between rows; at the start [o] [x] [+] [-] give a bullet, a check, a plus and a minus, and at the end [>] [=] [on] [off] give a chevron, a hamburger and a toggle — any other bracket text is used verbatim as a template name and will not resolve, so keep to these.",
+    "example": "A text menu without icon\n[+]Add an Item[>]\n[-]Delete an item\n*Selected item,OK\n-Disabled Item[=]\n[x]Checkmark\n[O]Bullet item\nOn Button[on]\nOff Button[off]\n\n   Another item with spaces"
+  },
+  "avabodh.wireframe.iospicker": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "cell,cell",
+        "means": "a comma starts the next column; the markers below apply per cell"
+      }
+    ],
+    "note": "Each line is one row and each comma one wheel column; at most seven lines are kept, and the middle line is the row under the selection bar.",
+    "example": "7,59\n8,00\n9,01,PM\n10,02,AM\n11,03\n12,04\n1,05"
+  },
+  "avabodh.wireframe.iossegmented": {
+    "separator": "comma",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * at the start of the item"
+      },
+      {
+        "syntax": "\\n",
+        "means": "a line break inside the item"
+      }
+    ],
+    "note": "Each comma-separated item is one segment of the control.",
+    "example": "*First,Second,Third"
+  },
+  "avabodh.wireframe.linkbar": {
+    "separator": "comma",
+    "markers": [
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "\\-item",
+        "means": "a literal - at the start of the item"
+      }
+    ],
+    "note": "Each comma-separated item is one link in the bar.",
+    "example": "Home,Product,Blog,Contact"
+  },
+  "avabodh.wireframe.listbox": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "*-item",
+        "means": "selected and disabled; -* is the same"
+      },
+      {
+        "syntax": "[icon]item",
+        "means": "leading icon, by icon name"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * or - at the start of the item"
+      }
+    ],
+    "note": "Each line is one item; a leading [name] embeds that template as an icon and the name is used verbatim, so give a full id such as [avabodh.wireframe.icon_check]. The border and the minimum item height are template parameters.",
+    "example": "first item\n-disabled item\n*selected item\nanother item"
+  },
+  "avabodh.wireframe.menu": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "*-item",
+        "means": "selected and disabled; -* is the same"
+      },
+      {
+        "syntax": "[icon]item",
+        "means": "leading icon, by icon name"
+      },
+      {
+        "syntax": "item,suffix",
+        "means": "right-aligned trailing text"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * or - at the start of the item"
+      }
+    ],
+    "note": "Each line is one row; a line of only -, --, ---, ---- or = draws a separator row; the text after the last comma is right-aligned, which is where an accelerator goes and where > reads as a submenu; [o] and [x] at the start draw a bullet and a check, and any other bracket text is used verbatim as a template name.",
+    "example": "Open,CTRL+O\n*Open Recent,>\n---\n[O]Option One\nOption Two\n=\n[x]Toggle Item\n-Disabled Item\nExit,CTRL+Q"
+  },
+  "avabodh.wireframe.menubar": {
+    "separator": "comma",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "*-item",
+        "means": "selected and disabled; -* is the same"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * or - at the start of the item"
+      },
+      {
+        "syntax": "\\n",
+        "means": "a line break inside the item"
+      }
+    ],
+    "note": "Each comma-separated item is one top-level menu title.",
+    "example": "File,*Edit,-Window,Help"
+  },
+  "avabodh.wireframe.multilinebutton": {
+    "separator": "newline",
+    "markers": [],
+    "note": "Every line is a line of the button's label; there are no per-line markers.",
+    "example": "Multiline Button\nsecond line of text"
+  },
+  "avabodh.wireframe.pointybutton": {
+    "separator": "none",
+    "markers": [],
+    "note": "The whole text is the button's label; which side the point is on is a template parameter.",
+    "example": "Button"
+  },
+  "avabodh.wireframe.radiobutton": {
+    "separator": "none",
+    "markers": [],
+    "note": "The whole text is the label beside the dot; checked and the state are template parameters, not text.",
+    "example": "radio button"
+  },
+  "avabodh.wireframe.radiobuttongroup": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "[icon]item",
+        "means": "leading icon, by icon name"
+      },
+      {
+        "syntax": "\\-item",
+        "means": "a literal - at the start of the item"
+      }
+    ],
+    "note": "Each line is one row: [( )] or [] draws an empty dot, [o] a selected one and [-] a disabled mark, and a line with no leading bracket is a plain label with no button.",
+    "example": "[O]option 1 (selected)\n[( )]option2\n-[O]option 3 (selected and disabled)\n-[( )]option 4 (disabled)\nA row without radio button"
+  },
+  "avabodh.wireframe.tabs": {
+    "separator": "comma",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "*-item",
+        "means": "selected and disabled; -* is the same"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * or - at the start of the item"
+      }
+    ],
+    "note": "Each comma-separated item is one tab, drawn above or below the panel; which edge the tabs sit on and how they are aligned are template parameters.",
+    "example": "*One,Two,Three"
+  },
+  "avabodh.wireframe.tabshead": {
+    "separator": "comma",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * at the start of the item"
+      },
+      {
+        "syntax": "\\n",
+        "means": "a line break inside the item"
+      }
+    ],
+    "note": "Each comma-separated item is one tab in the strip — this shape is the tab row on its own, with no panel below it; \\n gives a tab a second line.",
+    "example": "Home,*Products,About,Contact"
+  },
+  "avabodh.wireframe.tooltip": {
+    "separator": "none",
+    "markers": [],
+    "note": "The whole text is the tooltip's body; which edge the pointer comes out of is a template parameter.",
+    "example": "Tooltip text"
+  },
+  "avabodh.wireframe.tree": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "*-item",
+        "means": "selected and disabled; -* is the same"
+      },
+      {
+        "syntax": "[icon]item",
+        "means": "leading icon, by icon name"
+      },
+      {
+        "syntax": "  item",
+        "means": "leading spaces set the nesting level"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * or - at the start of the item"
+      }
+    ],
+    "note": "Each line is one node and leading spaces set its depth; [+] [-] [>] [v] draw expand and collapse controls and [folder] [folder-open] [file] the usual icons — any other bracket text is used verbatim as a template name and will not resolve.",
+    "example": "[folder]Item with closed folder icon\n[folder-open]Item with open folder icon\n[file]Item with file icon\n[+]You may also use this\n[-]and this\nor this\n[>]or even this\n[v]and this\n-[+]disabled tree item\n*[-]selected tree item\n [-]Add space for hierarchy\n  [+]another level of hierarchy"
+  },
+  "avabodh.wireframe.vtabs": {
+    "separator": "newline",
+    "markers": [
+      {
+        "syntax": "*item",
+        "means": "selected"
+      },
+      {
+        "syntax": "-item",
+        "means": "disabled"
+      },
+      {
+        "syntax": "*-item",
+        "means": "selected and disabled; -* is the same"
+      },
+      {
+        "syntax": "\\*item",
+        "means": "a literal * or - at the start of the item"
+      }
+    ],
+    "note": "Each line is one tab down the side of the shape.",
+    "example": "*One\nTwo\nThree"
+  }
+}
