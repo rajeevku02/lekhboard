@@ -2,12 +2,13 @@
 'use strict';
 
 /*
- * generate-stencil-index.js — build stencils/v3/_index.json and
- * stencils/v3/_text_syntax.json from BOTH catalogue sources.
+ * generate-stencil-index.js — build <published>/_index.json and
+ * <published>/_text_syntax.json from BOTH catalogue sources. The published
+ * folder is stencils/v4 unless --published names another.
  *
  * The catalogue is two sets, not one:
  *
- *   published  lekhboard/stencils/v3/*.json          98 files
+ *   published  lekhboard/stencils/v4/*.json          105 files
  *   core       lekhcore/stencils/core/*.json         the files that carry a
  *                                                    `library` array (13 today)
  *
@@ -25,10 +26,11 @@
  * Usage:
  *   node tools/generate-stencil-index.js [options]
  *
+ *     --published <dir>  the published folder to index (default: stencils/v4)
  *     --core <dir>   lekhcore/stencils/core  (default: ../lekhcore/stencils/core)
  *     --lua  <dir>   lekhcore/stencils/lua   (default: <core>/../lua)
- *     --out  <dir>   where to write          (default: stencils/v3)
- *     --check        regenerate and diff against what is committed; write
+ *     --out  <dir>   where to write          (default: the --published folder)
+ *     --check        regenerate and diff against what is in --out; write
  *                    nothing and exit non-zero if they differ
  *     --quiet        only print the summary
  *
@@ -39,7 +41,7 @@ const fs = require('fs');
 const path = require('path');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
-const PUBLISHED_DIR = path.join(REPO_ROOT, 'stencils', 'v3');
+const DEFAULT_PUBLISHED_DIR = path.join(REPO_ROOT, 'stencils', 'v4');
 const NOTES_FILE = path.join(__dirname, 'text-syntax-notes.json');
 
 /* The core files that are NOT catalogues. They carry no `library` array and are
@@ -70,13 +72,15 @@ function parseArgs(argv) {
     const opts = {
         core: process.env.LEKHCORE_STENCILS || path.resolve(REPO_ROOT, '..', 'lekhcore', 'stencils', 'core'),
         lua: null,
-        out: PUBLISHED_DIR,
+        published: DEFAULT_PUBLISHED_DIR,
+        out: null,
         check: false,
         quiet: false,
     };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i];
-        if (a === '--core') { opts.core = argv[++i]; }
+        if (a === '--published') { opts.published = argv[++i]; }
+        else if (a === '--core') { opts.core = argv[++i]; }
         else if (a === '--lua') { opts.lua = argv[++i]; }
         else if (a === '--out') { opts.out = argv[++i]; }
         else if (a === '--check') { opts.check = true; }
@@ -87,9 +91,11 @@ function parseArgs(argv) {
         } else { fail('unknown argument: ' + a); }
     }
     if (!opts.core) { fail('no core directory'); }
+    if (!opts.published) { fail('no published directory'); }
+    opts.published = path.resolve(opts.published);
     opts.core = path.resolve(opts.core);
     opts.lua = opts.lua ? path.resolve(opts.lua) : path.resolve(opts.core, '..', 'lua');
-    opts.out = path.resolve(opts.out);
+    opts.out = opts.out ? path.resolve(opts.out) : opts.published;
     return opts;
 }
 
@@ -186,8 +192,24 @@ function numeric(v) {
 }
 
 /*
- * Text slots, from the body the generator already has open.
- *   texts: []           — a list of slots, one entry each
+ * The title entry, by the engine's rule (Serializer.cpp parseTemplateData): the
+ * FIRST `texts` entry whose `external` is one of the side names. Anything else
+ * in `external` — absent, true/false, another string, a number — is not a title.
+ * Returns the entry's index, or -1.
+ */
+const TITLE_SIDES = new Set(['bottom', 'top', 'left', 'right']);
+
+function titleIndex(template) {
+    const tx = template.texts;
+    if (!Array.isArray(tx)) { return -1; }
+    return tx.findIndex((t) => t && typeof t === 'object'
+        && typeof t.external === 'string' && TITLE_SIDES.has(t.external));
+}
+
+/*
+ * Text slots, from the body the generator already has open. A title entry is
+ * not a slot: it is reported by has_title instead.
+ *   texts: []           — a list of slots, one entry each, less the title
  *   texts: "default"    — one slot, placed at the shape's default location
  *   texts: "16 17 18.." — one slot, placed at those data points
  *   texts: ""           — none
@@ -197,7 +219,8 @@ function numeric(v) {
 function textSlots(template) {
     const tx = template.texts;
     if (Array.isArray(tx)) {
-        if (tx.length > 0) { return tx.length; }
+        const slots = tx.length - (titleIndex(template) === -1 ? 0 : 1);
+        if (slots > 0) { return slots; }
     } else if (typeof tx === 'string') {
         if (tx.trim() !== '') { return 1; }
     }
@@ -231,6 +254,7 @@ function row(template, placementParams, categ, file, source) {
         interpret_text: !!(g && g.interprettext),
         has_params: hasParams(template),
         text_slots: textSlots(template),
+        has_title: titleIndex(template) !== -1,
         _template: template,
     };
 }
@@ -417,8 +441,8 @@ function main() {
     const warnings = [];
     const warn = (s) => { warnings.push(s); };
 
-    if (!fs.existsSync(PUBLISHED_DIR) || !fs.statSync(PUBLISHED_DIR).isDirectory()) {
-        fail('the published catalogue is missing: ' + PUBLISHED_DIR);
+    if (!fs.existsSync(opts.published) || !fs.statSync(opts.published).isDirectory()) {
+        fail('the published catalogue is missing: ' + opts.published);
     }
     if (!fs.existsSync(opts.core) || !fs.statSync(opts.core).isDirectory()) {
         fail('the core catalogue is missing: ' + opts.core + '\n'
@@ -439,11 +463,11 @@ function main() {
             + 'The interpreted-text syntax is derived from the split() flags in those sources.');
     }
 
-    const publishedFiles = stencilFiles(PUBLISHED_DIR);
+    const publishedFiles = stencilFiles(opts.published);
     const coreFiles = stencilFiles(opts.core);
     const dangling = [];
 
-    const published = collectPlacements(PUBLISHED_DIR, 'published', publishedFiles, dangling);
+    const published = collectPlacements(opts.published, 'published', publishedFiles, dangling);
     const core = collectPlacements(opts.core, 'core', coreFiles, dangling);
 
     for (const name of coreFiles) {
@@ -501,7 +525,7 @@ function main() {
     }
     for (const [id, group] of byId) {
         if (group.length < 2) { continue; }
-        const shapes = new Set(group.map((r) => JSON.stringify([r.generated, r.interpret_text, r.has_params, r.text_slots, r.default_size])));
+        const shapes = new Set(group.map((r) => JSON.stringify([r.generated, r.interpret_text, r.has_params, r.text_slots, r.has_title, r.default_size])));
         if (shapes.size > 1) {
             warn(id + ' is defined differently by ' + [...new Set(group.map((r) => r.source + '/' + r.file + '.json'))].join(' and ')
                 + '. The first row, from ' + firstById.get(id).source + '/' + firstById.get(id).file + '.json, is the one to resolve a body from.');
@@ -532,7 +556,9 @@ function main() {
     const generated = firstRows.filter((r) => r.generated).length;
     const withParams = firstRows.filter((r) => r.has_params).length;
     const multiSlot = firstRows.filter((r) => r.text_slots > 1).length;
-    log('published  ' + publishedFiles.length + ' files, ' + published.rows.length + ' placements, '
+    const titled = firstRows.filter((r) => r.has_title).length;
+    log('published  ' + path.relative(REPO_ROOT, opts.published) + ': ' + publishedFiles.length + ' files, '
+        + published.rows.length + ' placements, '
         + new Set(published.rows.map((r) => r.id)).size + ' ids, '
         + new Set(published.rows.map((r) => r.category)).size + ' categories');
     log('core       ' + core.libraryFiles + ' library files of ' + coreFiles.length + ', '
@@ -544,7 +570,8 @@ function main() {
     log('core-only  ' + new Set(coreOnlyRows.map((r) => r.id)).size + ' ids in '
         + [...new Set(coreOnlyRows.map((r) => r.category))].sort().join(', '));
     log('ids        ' + generated + ' carry a generator, ' + interpreting.length + ' interpret their text, '
-        + withParams + ' declare parameters, ' + multiSlot + ' have more than one text slot');
+        + withParams + ' declare parameters, ' + multiSlot + ' have more than one text slot, '
+        + titled + ' have a title');
 
     for (const d of dangling) {
         warn('placement "' + d.id + '" in ' + d.source + '/' + d.file + '.json (' + d.library + ') '
