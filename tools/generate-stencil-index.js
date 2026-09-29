@@ -8,7 +8,7 @@
  *
  * The catalogue is two sets, not one:
  *
- *   published  lekhboard/stencils/v4/*.json          148 files
+ *   published  lekhboard/stencils/v4/*.json          128 files
  *   core       lekhcore/stencils/core/*.json         the files that carry a
  *                                                    `library` array (13 today)
  *

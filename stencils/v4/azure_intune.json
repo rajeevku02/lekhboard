@@ -10,7 +10,7 @@
       "objects": [
         {
           "template": {
-            "id": "azure.services.intune.device_security_apple",
+            "id": "azure.services.intune.00399_icon_service_device_security_apple",
             "name": "Device Security Apple",
             "data": [
               "0.199978*w",
@@ -491,7 +491,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.device_security_google",
+            "id": "azure.services.intune.00399_icon_service_device_security_google",
             "name": "Device Security Google",
             "data": [
               "0.199978*w",
@@ -972,7 +972,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.device_security_windows",
+            "id": "azure.services.intune.00399_icon_service_device_security_windows",
             "name": "Device Security Windows",
             "data": [
               "0.199978*w",
@@ -1453,7 +1453,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.engage_center_connect",
+            "id": "azure.services.intune.029797391_icon_service_engage_center_connect",
             "name": "Engage Center Connect",
             "data": [
               "0.428717*w",
@@ -1802,7 +1802,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.intune",
+            "id": "azure.services.intune.10329_icon_service_intune",
             "name": "Intune",
             "data": [
               "-0.470571*w",
@@ -2213,7 +2213,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.ebooks",
+            "id": "azure.services.intune.10330_icon_service_ebooks",
             "name": "eBooks",
             "data": [
               "0.456547*w",
@@ -2771,7 +2771,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.client_apps",
+            "id": "azure.services.intune.10331_icon_service_client_apps",
             "name": "Client Apps",
             "data": [
               "-0.15*w",
@@ -2904,7 +2904,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.devices",
+            "id": "azure.services.intune.10332_icon_service_devices",
             "name": "Devices",
             "data": [
               "-0.466667*w",
@@ -3300,7 +3300,7 @@
                 "style": {
                   "fillpaint": {
                     "type": 2,
-                    "color": 3858759680
+                    "color": 3873568254
                   },
                   "strokepaint": {
                     "type": 1
@@ -3361,7 +3361,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.device_compliance",
+            "id": "azure.services.intune.10333_icon_service_device_compliance",
             "name": "Device Compliance",
             "data": [
               "-0.466969*w",
@@ -3780,7 +3780,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.software_updates",
+            "id": "azure.services.intune.10335_icon_service_software_updates",
             "name": "Software Updates",
             "data": [
               "-0.466667*w",
@@ -4326,7 +4326,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.security_baselines",
+            "id": "azure.services.intune.10336_icon_service_security_baselines",
             "name": "Security Baselines",
             "data": [
               "0.200237*w",
@@ -4867,7 +4867,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.device_enrollment",
+            "id": "azure.services.intune.10337_icon_service_device_enrollment",
             "name": "Device Enrollment",
             "data": [
               "-0.466667*w",
@@ -5395,7 +5395,7 @@
                 "style": {
                   "fillpaint": {
                     "type": 2,
-                    "color": 3858759680
+                    "color": 3873568254
                   },
                   "strokepaint": {
                     "type": 1
@@ -5482,7 +5482,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.device_configuration",
+            "id": "azure.services.intune.10338_icon_service_device_configuration",
             "name": "Device Configuration",
             "data": [
               "-0.467076*w",
@@ -6084,7 +6084,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.exchange_access",
+            "id": "azure.services.intune.10339_icon_service_exchange_access",
             "name": "Exchange Access",
             "data": [
               "w/2",
@@ -6453,7 +6453,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.entra_identity_roles_and_administrators",
+            "id": "azure.services.intune.10340_icon_service_entra_identity_roles_and_administrators",
             "name": "Entra Identity Roles and Administrators",
             "data": [
               "0.294539*w",
@@ -6718,7 +6718,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.tenant_status",
+            "id": "azure.services.intune.10342_icon_service_tenant_status",
             "name": "Tenant Status",
             "data": [
               "0.312575*w",
@@ -7070,7 +7070,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.intune_for_education",
+            "id": "azure.services.intune.10343_icon_service_intune_for_education",
             "name": "Intune For Education",
             "data": [
               "-0.470571*w",
@@ -7481,7 +7481,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.intune_app_protection",
+            "id": "azure.services.intune.10344_icon_service_intune_app_protection",
             "name": "Intune App Protection",
             "data": [
               "-0.470571*w",
@@ -7892,7 +7892,7 @@
         },
         {
           "template": {
-            "id": "azure.services.intune.mindaro",
+            "id": "azure.services.intune.10350_icon_service_mindaro",
             "name": "Mindaro",
             "data": [
               "0.234508*w",

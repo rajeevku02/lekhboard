@@ -10,7 +10,7 @@
       "objects": [
         {
           "template": {
-            "id": "azure.services.general.cost_management_and_billing",
+            "id": "azure.services.general.00004_icon_service_cost_management_and_billing",
             "name": "Cost Management and Billing",
             "data": [
               "0.058304*w",
@@ -334,7 +334,476 @@
         },
         {
           "template": {
-            "id": "azure.services.general.all_resources",
+            "id": "azure.services.general.00456_icon_service_preview_features",
+            "name": "Preview Features",
+            "data": [
+              "0.276167*w",
+              "-0.052278*h",
+              "0.271746*w",
+              "-0.052278*h",
+              "0.267507*w",
+              "-0.054034*h",
+              "0.264382*w",
+              "-0.057159*h",
+              "0.261256*w",
+              "-0.060285*h",
+              "0.2595*w",
+              "-0.064524*h",
+              "0.2595*w",
+              "-0.068944*h",
+              "0",
+              "0.259378*w",
+              "-0.174104*h",
+              "0.174159*w",
+              "-0.259322*h",
+              "0.069*w",
+              "-0.259444*h",
+              "0.06458*w",
+              "-0.259444*h",
+              "0.06034*w",
+              "-0.2612*h",
+              "0.057215*w",
+              "-0.264326*h",
+              "0.054089*w",
+              "-0.267452*h",
+              "0.052333*w",
+              "-0.271691*h",
+              "0.052333*w",
+              "-0.276111*h",
+              "0",
+              "0.052333*w",
+              "-0.280531*h",
+              "0.054089*w",
+              "-0.284771*h",
+              "0.057215*w",
+              "-0.287896*h",
+              "0.06034*w",
+              "-0.291022*h",
+              "0.06458*w",
+              "-0.292778*h",
+              "0.069*w",
+              "-0.292778*h",
+              "0",
+              "0.174172*w",
+              "-0.2929*h",
+              "0.259383*w",
+              "-0.378161*h",
+              "0.259444*w",
+              "-0.483333*h",
+              "0.259444*w",
+              "-0.487754*h",
+              "0.2612*w",
+              "-0.491993*h",
+              "0.264326*w",
+              "-0.495118*h",
+              "0.267452*w",
+              "-0.498244*h",
+              "0.271691*w",
+              "-h/2",
+              "0.276111*w",
+              "-h/2",
+              "0",
+              "0.280531*w",
+              "-h/2",
+              "0.284771*w",
+              "-0.498244*h",
+              "0.287896*w",
+              "-0.495118*h",
+              "0.291022*w",
+              "-0.491993*h",
+              "0.292778*w",
+              "-0.487754*h",
+              "0.292778*w",
+              "-0.483333*h",
+              "0",
+              "0.2929*w",
+              "-0.378152*h",
+              "0.378152*w",
+              "-0.292925*h",
+              "0.483333*w",
+              "-0.292833*h",
+              "0.492538*w",
+              "-0.292833*h",
+              "w/2",
+              "-0.285371*h",
+              "w/2",
+              "-0.276167*h",
+              "w/2",
+              "-0.266962*h",
+              "0.492538*w",
+              "-0.2595*h",
+              "0.483333*w",
+              "-0.2595*h",
+              "0",
+              "0.378205*w",
+              "-0.259378*h",
+              "0.293011*w",
+              "-0.174184*h",
+              "0.292889*w",
+              "-0.069056*h",
+              "0.292889*w",
+              "-0.064635*h",
+              "0.291133*w",
+              "-0.060396*h",
+              "0.288007*w",
+              "-0.05727*h",
+              "0.284882*w",
+              "-0.054145*h",
+              "0.280642*w",
+              "-0.052389*h",
+              "0.276222*w",
+              "-0.052389*h",
+              "-0.466667*w",
+              "-h/2",
+              "-0.085611*w",
+              "-h/2",
+              "-0.067202*w",
+              "-h/2",
+              "-0.052278*w",
+              "-0.485076*h",
+              "-0.052278*w",
+              "-0.466667*h",
+              "-0.052278*w",
+              "-0.085611*h",
+              "-0.052278*w",
+              "-0.067202*h",
+              "-0.067202*w",
+              "-0.052278*h",
+              "-0.085611*w",
+              "-0.052278*h",
+              "-0.466667*w",
+              "-0.052278*h",
+              "-0.485076*w",
+              "-0.052278*h",
+              "-w/2",
+              "-0.067202*h",
+              "-w/2",
+              "-0.085611*h",
+              "-w/2",
+              "-0.466667*h",
+              "-w/2",
+              "-0.485076*h",
+              "-0.485076*w",
+              "-h/2",
+              "-0.466667*w",
+              "-h/2",
+              "-0.466667*w",
+              "0.052278*h",
+              "-0.085611*w",
+              "0.052278*h",
+              "-0.067202*w",
+              "0.052278*h",
+              "-0.052278*w",
+              "0.067202*h",
+              "-0.052278*w",
+              "0.085611*h",
+              "-0.052278*w",
+              "0.466667*h",
+              "-0.052278*w",
+              "0.475507*h",
+              "-0.05579*w",
+              "0.483986*h",
+              "-0.062041*w",
+              "0.490237*h",
+              "-0.068292*w",
+              "0.496488*h",
+              "-0.076771*w",
+              "h/2",
+              "-0.085611*w",
+              "h/2",
+              "-0.466667*w",
+              "h/2",
+              "-0.475507*w",
+              "h/2",
+              "-0.483986*w",
+              "0.496488*h",
+              "-0.490237*w",
+              "0.490237*h",
+              "-0.496488*w",
+              "0.483986*h",
+              "-w/2",
+              "0.475507*h",
+              "-w/2",
+              "0.466667*h",
+              "-w/2",
+              "0.085611*h",
+              "-w/2",
+              "0.067202*h",
+              "-0.485076*w",
+              "0.052278*h",
+              "-0.466667*w",
+              "0.052278*h",
+              "0.085611*w",
+              "0.052278*h",
+              "0.466667*w",
+              "0.052278*h",
+              "0.475507*w",
+              "0.052278*h",
+              "0.483986*w",
+              "0.05579*h",
+              "0.490237*w",
+              "0.062041*h",
+              "0.496488*w",
+              "0.068292*h",
+              "w/2",
+              "0.076771*h",
+              "w/2",
+              "0.085611*h",
+              "w/2",
+              "0.466667*h",
+              "w/2",
+              "0.475507*h",
+              "0.496488*w",
+              "0.483986*h",
+              "0.490237*w",
+              "0.490237*h",
+              "0.483986*w",
+              "0.496488*h",
+              "0.475507*w",
+              "h/2",
+              "0.466667*w",
+              "h/2",
+              "0.085611*w",
+              "h/2",
+              "0.076771*w",
+              "h/2",
+              "0.068292*w",
+              "0.496488*h",
+              "0.062041*w",
+              "0.490237*h",
+              "0.05579*w",
+              "0.483986*h",
+              "0.052278*w",
+              "0.475507*h",
+              "0.052278*w",
+              "0.466667*h",
+              "0.052278*w",
+              "0.085611*h",
+              "0.052278*w",
+              "0.067202*h",
+              "0.067202*w",
+              "0.052278*h",
+              "0.085611*w",
+              "0.052278*h",
+              "-0.138*w",
+              "-0.104556*h",
+              "-0.276278*w",
+              "-0.432687*w",
+              "-0.104556*h",
+              "-0.447611*w",
+              "-0.119479*h",
+              "-0.447611*w",
+              "-0.137889*h",
+              "-0.276556*h",
+              "-0.447611*w",
+              "-0.432854*h",
+              "-0.432687*w",
+              "-0.447778*h",
+              "-0.414278*w",
+              "-0.447778*h",
+              "0.276278*w",
+              "-0.119591*w",
+              "-0.447778*h",
+              "-0.104667*w",
+              "-0.432854*h",
+              "-0.104667*w",
+              "-0.414444*h",
+              "0.276444*h",
+              "-0.104667*w",
+              "-0.119591*h",
+              "-0.119591*w",
+              "-0.104667*h",
+              "-0.138*w",
+              "-0.104667*h",
+              "-0.104667*w",
+              "0.414278*h",
+              "-0.276278*h",
+              "-0.104667*w",
+              "0.119591*h",
+              "-0.119591*w",
+              "0.104667*h",
+              "-0.138*w",
+              "0.104667*h",
+              "-0.276444*w",
+              "-0.432854*w",
+              "0.104667*h",
+              "-0.447778*w",
+              "0.119591*h",
+              "-0.447778*w",
+              "0.138*h",
+              "0",
+              "0.276389*h",
+              "-0.447778*w",
+              "0.423229*h",
+              "-0.444266*w",
+              "0.431708*h",
+              "-0.438015*w",
+              "0.437959*h",
+              "-0.431763*w",
+              "0.44421*h",
+              "-0.423285*w",
+              "0.447722*h",
+              "-0.414444*w",
+              "0.447722*h",
+              "0.276444*w",
+              "-0.129159*w",
+              "0.447722*h",
+              "-0.120681*w",
+              "0.44421*h",
+              "-0.11443*w",
+              "0.437959*h",
+              "-0.108179*w",
+              "0.431708*h",
+              "-0.104667*w",
+              "0.423229*h",
+              "-0.104667*w",
+              "0.414389*h",
+              "0",
+              "0.447667*w",
+              "0.414278*h",
+              "-0.276278*h",
+              "0.447667*w",
+              "0.129159*h",
+              "0.444155*w",
+              "0.120681*h",
+              "0.437904*w",
+              "0.11443*h",
+              "0.431652*w",
+              "0.108179*h",
+              "0.423174*w",
+              "0.104667*h",
+              "0.414333*w",
+              "0.104667*h",
+              "-0.276444*w",
+              "0.119479*w",
+              "0.104667*h",
+              "0.104556*w",
+              "0.119591*h",
+              "0.104556*w",
+              "0.138*h",
+              "0",
+              "0.276389*h",
+              "0.104556*w",
+              "0.423229*h",
+              "0.108067*w",
+              "0.431708*h",
+              "0.114319*w",
+              "0.437959*h",
+              "0.12057*w",
+              "0.44421*h",
+              "0.129048*w",
+              "0.447722*h",
+              "0.137889*w",
+              "0.447722*h",
+              "0.276278*w",
+              "0.423055*w",
+              "0.447796*h",
+              "0.431605*w",
+              "0.444317*h",
+              "0.437917*w",
+              "0.438058*h",
+              "0.444228*w",
+              "0.431799*h",
+              "0.447778*w",
+              "0.423278*h",
+              "0.447778*w",
+              "0.414389*h",
+              "-0.000389*h"
+            ],
+            "draw": [
+              {
+                "path": "M 0 1 C 2 3 4 5 6 7 C 8 9 10 11 12 13 h 14 C 15 16 17 18 19 20 C 21 22 23 24 25 26 C 27 28 29 30 31 32 h 33 C 34 35 36 37 38 39 C 40 41 42 43 44 45 h 46 C 47 48 49 50 51 52 C 53 54 55 56 57 58 C 59 60 61 62 63 64 h 65 C 66 67 68 69 70 71 C 72 73 74 75 76 77 h 78 C 79 80 81 82 83 84 C 85 86 87 88 89 90 C 91 92 93 94 95 96 h 97 C 98 99 100 101 102 103 C 104 105 106 107 108 109 C 110 111 112 113 114 115 Z",
+                "style": {
+                  "fillpaint": {
+                    "type": 2,
+                    "color": 4284388900
+                  },
+                  "strokepaint": {
+                    "type": 1
+                  },
+                  "strokewidth": 1
+                }
+              },
+              {
+                "path": "M 116 117 L 118 119 C 120 121 122 123 124 125 L 126 127 C 128 129 130 131 132 133 L 134 135 C 136 137 138 139 140 141 L 142 143 C 144 145 146 147 148 149 Z",
+                "style": {
+                  "fillpaint": {
+                    "type": 2,
+                    "color": 4286499120
+                  },
+                  "strokepaint": {
+                    "type": 1
+                  },
+                  "strokewidth": 1
+                }
+              },
+              {
+                "path": "M 150 151 L 152 153 C 154 155 156 157 158 159 L 160 161 C 162 163 164 165 166 167 C 168 169 170 171 172 173 L 174 175 C 176 177 178 179 180 181 C 182 183 184 185 186 187 L 188 189 C 190 191 192 193 194 195 Z",
+                "style": {
+                  "fillpaint": {
+                    "type": 2,
+                    "color": 4286499120
+                  },
+                  "strokepaint": {
+                    "type": 1
+                  },
+                  "strokewidth": 1
+                }
+              },
+              {
+                "path": "M 196 197 L 198 199 C 200 201 202 203 204 205 C 206 207 208 209 210 211 L 212 213 C 214 215 216 217 218 219 C 220 221 222 223 224 225 L 226 227 C 228 229 230 231 232 233 C 234 235 236 237 238 239 L 240 241 C 242 243 244 245 246 247 Z",
+                "style": {
+                  "fillpaint": {
+                    "type": 2,
+                    "color": 4286499120
+                  },
+                  "strokepaint": {
+                    "type": 1
+                  },
+                  "strokewidth": 1
+                }
+              },
+              {
+                "path": "M 248 249 h 250 C 251 252 253 254 255 256 v 257 C 258 259 260 261 262 263 h 264 C 265 266 267 268 269 270 v 271 C 272 273 274 275 276 277 Z M 278 279 v 280 C 281 282 283 284 285 286 h 287 C 288 289 290 291 292 293 h 294 v 295 C 296 297 298 299 300 301 C 302 303 304 305 306 307 h 308 C 309 310 311 312 313 314 C 315 316 317 318 319 320 v 321 Z M 322 323 v 324 C 325 326 327 328 329 330 C 331 332 333 334 335 336 h 337 C 338 339 340 341 342 343 h 344 v 345 C 346 347 348 349 350 351 C 352 353 354 355 356 357 h 358 C 359 360 361 362 363 364 C 365 366 367 368 369 370 v 371 Z",
+                "style": {
+                  "fillpaint": {
+                    "type": 2,
+                    "color": 4287026739
+                  },
+                  "strokepaint": {
+                    "type": 1
+                  },
+                  "strokewidth": 1
+                }
+              }
+            ],
+            "default": {
+              "width": 64,
+              "height": 64,
+              "angle": 0
+            },
+            "texts": [
+              {
+                "text": "Preview Features",
+                "external": "bottom"
+              }
+            ],
+            "libraryview": {
+              "width": 64,
+              "height": 64,
+              "scale": true,
+              "priority": 0,
+              "text": "\n"
+            }
+          },
+          "params": {
+            "width": 64,
+            "height": 64
+          }
+        },
+        {
+          "template": {
+            "id": "azure.services.general.10001_icon_service_all_resources",
             "name": "All Resources",
             "data": [
               "-0.15*w",
@@ -461,7 +930,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.subscriptions",
+            "id": "azure.services.general.10002_icon_service_subscriptions",
             "name": "Subscriptions",
             "data": [
               "0.445978*w",
@@ -878,7 +1347,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.reservations",
+            "id": "azure.services.general.10003_icon_service_reservations",
             "name": "Reservations",
             "data": [
               "0.499642*w",
@@ -1377,7 +1846,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.service_health",
+            "id": "azure.services.general.10004_icon_service_service_health",
             "name": "Service Health",
             "data": [
               "0.000291*w",
@@ -1669,7 +2138,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.information",
+            "id": "azure.services.general.10005_icon_service_information",
             "name": "Information",
             "data": [
               "0.308179*w",
@@ -1835,7 +2304,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.recent",
+            "id": "azure.services.general.10006_icon_service_recent",
             "name": "Recent",
             "data": [
               "w/2",
@@ -2243,7 +2712,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.resource_groups",
+            "id": "azure.services.general.10007_icon_service_resource_groups",
             "name": "Resource Groups",
             "data": [
               "-w/2",
@@ -2782,7 +3251,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.marketplace",
+            "id": "azure.services.general.10008_icon_service_marketplace",
             "name": "Marketplace",
             "data": [
               "0.416779*w",
@@ -3062,7 +3531,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.templates",
+            "id": "azure.services.general.10009_icon_service_templates",
             "name": "Templates",
             "data": [
               "0.069065*w",
@@ -3676,7 +4145,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.quickstart_center",
+            "id": "azure.services.general.10010_icon_service_quickstart_center",
             "name": "Quickstart Center",
             "data": [
               "-0.281979*w",
@@ -4097,7 +4566,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.management_groups",
+            "id": "azure.services.general.10011_icon_service_management_groups",
             "name": "Management Groups",
             "data": [
               "0.275773*w",
@@ -4922,7 +5391,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.help_and_support",
+            "id": "azure.services.general.10013_icon_service_help_and_support",
             "name": "Help and Support",
             "data": [
               "0.407594*w",
@@ -5169,7 +5638,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.tag",
+            "id": "azure.services.general.10014_icon_service_tag",
             "name": "Tag",
             "data": [
               "0.490243*w",
@@ -5373,7 +5842,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.dashboard",
+            "id": "azure.services.general.10015_icon_service_dashboard",
             "name": "Dashboard",
             "data": [
               "-0.4695*w",
@@ -5860,7 +6329,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.free_services",
+            "id": "azure.services.general.10016_icon_service_free_services",
             "name": "Free Services",
             "data": [
               "-0.466567*w",
@@ -6302,7 +6771,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.cost_management",
+            "id": "azure.services.general.10019_icon_service_cost_management",
             "name": "Cost Management",
             "data": [
               "0.192796*w",
@@ -6544,7 +7013,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.marketplace_management",
+            "id": "azure.services.general.10112_icon_service_marketplace_management",
             "name": "Marketplace Management",
             "data": [
               "0.416554*w",
@@ -7272,7 +7741,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.region_management",
+            "id": "azure.services.general.10116_icon_service_region_management",
             "name": "Region Management",
             "data": [
               "-0.040552*w",
@@ -8166,7 +8635,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.troubleshoot",
+            "id": "azure.services.general.10341_icon_service_troubleshoot",
             "name": "Troubleshoot",
             "data": [
               "0.346453*w",
@@ -8438,7 +8907,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.resource_explorer",
+            "id": "azure.services.general.10349_icon_service_resource_explorer",
             "name": "Resource Explorer",
             "data": [
               "0.476442*w",
@@ -8785,7 +9254,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.biz_talk",
+            "id": "azure.services.general.10779_icon_service_biz_talk",
             "name": "Biz Talk",
             "data": [
               "w/2",
@@ -9204,7 +9673,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.blob_block",
+            "id": "azure.services.general.10780_icon_service_blob_block",
             "name": "Blob Block",
             "data": [
               "-w/2",
@@ -9518,7 +9987,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.blob_page",
+            "id": "azure.services.general.10781_icon_service_blob_page",
             "name": "Blob Page",
             "data": [
               "-w/2",
@@ -10044,7 +10513,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.branch",
+            "id": "azure.services.general.10782_icon_service_branch",
             "name": "Branch",
             "data": [
               "-0.490237*w",
@@ -10316,7 +10785,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.browser",
+            "id": "azure.services.general.10783_icon_service_browser",
             "name": "Browser",
             "data": [
               "-w/2",
@@ -10495,7 +10964,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.bug",
+            "id": "azure.services.general.10784_icon_service_bug",
             "name": "Bug",
             "data": [
               "0",
@@ -11022,7 +11491,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.builds",
+            "id": "azure.services.general.10785_icon_service_builds",
             "name": "Builds",
             "data": [
               "0.197765*w",
@@ -11444,7 +11913,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.cache",
+            "id": "azure.services.general.10786_icon_service_cache",
             "name": "Cache",
             "data": [
               "-0.14018*w",
@@ -11895,7 +12364,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.code",
+            "id": "azure.services.general.10787_icon_service_code",
             "name": "Code",
             "data": [
               "-w/2",
@@ -12270,7 +12739,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.commit",
+            "id": "azure.services.general.10788_icon_service_commit",
             "name": "Commit",
             "data": [
               "-0.216667*w",
@@ -12580,7 +13049,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.controls",
+            "id": "azure.services.general.10789_icon_service_controls",
             "name": "Controls",
             "data": [
               "-0.418179*w",
@@ -13227,7 +13696,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.controls_horizontal",
+            "id": "azure.services.general.10790_icon_service_controls_horizontal",
             "name": "Controls Horizontal",
             "data": [
               "-w/2",
@@ -13874,7 +14343,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.cost_alerts",
+            "id": "azure.services.general.10791_icon_service_cost_alerts",
             "name": "Cost Alerts",
             "data": [
               "w/2",
@@ -14172,7 +14641,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.cost_analysis",
+            "id": "azure.services.general.10792_icon_service_cost_analysis",
             "name": "Cost Analysis",
             "data": [
               "0.030921*w",
@@ -14560,7 +15029,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.cost_budgets",
+            "id": "azure.services.general.10793_icon_service_cost_budgets",
             "name": "Cost Budgets",
             "data": [
               "0.153346*w",
@@ -15071,7 +15540,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.counter",
+            "id": "azure.services.general.10794_icon_service_counter",
             "name": "Counter",
             "data": [
               "w/2",
@@ -15565,7 +16034,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.cubes",
+            "id": "azure.services.general.10795_icon_service_cubes",
             "name": "Cubes",
             "data": [
               "0.239235*w",
@@ -15804,7 +16273,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.dev_console",
+            "id": "azure.services.general.10796_icon_service_dev_console",
             "name": "Dev Console",
             "data": [
               "-w/2",
@@ -16093,7 +16562,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.download",
+            "id": "azure.services.general.10797_icon_service_download",
             "name": "Download",
             "data": [
               "0.223317*w",
@@ -16611,7 +17080,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.error",
+            "id": "azure.services.general.10798_icon_service_error",
             "name": "Error",
             "data": [
               "w/2",
@@ -16742,7 +17211,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.extensions",
+            "id": "azure.services.general.10799_icon_service_extensions",
             "name": "Extensions",
             "data": [
               "-0.259765*w",
@@ -17041,7 +17510,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.file",
+            "id": "azure.services.general.10800_icon_service_file",
             "name": "File",
             "data": [
               "0.069592*w",
@@ -17426,7 +17895,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.files",
+            "id": "azure.services.general.10801_icon_service_files",
             "name": "Files",
             "data": [
               "-0.47977*w",
@@ -17985,7 +18454,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.folder_blank",
+            "id": "azure.services.general.10802_icon_service_folder_blank",
             "name": "Folder Blank",
             "data": [
               "0.476611*w",
@@ -18234,7 +18703,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.folder_website",
+            "id": "azure.services.general.10803_icon_service_folder_website",
             "name": "Folder Website",
             "data": [
               "0.476611*w",
@@ -19370,7 +19839,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.ftp",
+            "id": "azure.services.general.10804_icon_service_ftp",
             "name": "FTP",
             "data": [
               "-w/2",
@@ -19651,7 +20120,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.gear",
+            "id": "azure.services.general.10805_icon_service_gear",
             "name": "Gear",
             "data": [
               "w/2",
@@ -19870,7 +20339,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.globe_error",
+            "id": "azure.services.general.10807_icon_service_globe_error",
             "name": "Globe Error",
             "data": [
               "0.021359*w",
@@ -20206,7 +20675,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.globe_success",
+            "id": "azure.services.general.10808_icon_service_globe_success",
             "name": "Globe Success",
             "data": [
               "0.021359*w",
@@ -20538,7 +21007,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.globe_warning",
+            "id": "azure.services.general.10809_icon_service_globe_warning",
             "name": "Globe Warning",
             "data": [
               "0.021359*w",
@@ -20930,7 +21399,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.guide",
+            "id": "azure.services.general.10810_icon_service_guide",
             "name": "Guide",
             "data": [
               "w/2",
@@ -21114,7 +21583,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.heart",
+            "id": "azure.services.general.10811_icon_service_heart",
             "name": "Heart",
             "data": [
               "-0.000029*w",
@@ -21242,7 +21711,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.image",
+            "id": "azure.services.general.10812_icon_service_image",
             "name": "Image",
             "data": [
               "-0.466353*w",
@@ -21449,7 +21918,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.input_output",
+            "id": "azure.services.general.10813_icon_service_input_output",
             "name": "Input Output",
             "data": [
               "-0.452175*w",
@@ -22165,7 +22634,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.journey_hub",
+            "id": "azure.services.general.10814_icon_service_journey_hub",
             "name": "Journey Hub",
             "data": [
               "-0.465883*w",
@@ -22491,7 +22960,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.launch_portal",
+            "id": "azure.services.general.10815_icon_service_launch_portal",
             "name": "Launch Portal",
             "data": [
               "w/2",
@@ -22747,7 +23216,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.learn",
+            "id": "azure.services.general.10816_icon_service_learn",
             "name": "Learn",
             "data": [
               "-0.498777*w",
@@ -23186,7 +23655,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.load_test",
+            "id": "azure.services.general.10817_icon_service_load_test",
             "name": "Load Test",
             "data": [
               "0.463244*w",
@@ -23580,7 +24049,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.location",
+            "id": "azure.services.general.10818_icon_service_location",
             "name": "Location",
             "data": [
               "0.218834*w",
@@ -23906,7 +24375,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.log_streaming",
+            "id": "azure.services.general.10819_icon_service_log_streaming",
             "name": "Log Streaming",
             "data": [
               "-0.49873*w",
@@ -24449,7 +24918,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.management_portal",
+            "id": "azure.services.general.10820_icon_service_management_portal",
             "name": "Management Portal",
             "data": [
               "-w/2",
@@ -24643,7 +25112,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.media_file",
+            "id": "azure.services.general.10821_icon_service_media_file",
             "name": "Media File",
             "data": [
               "0.069576*w",
@@ -25144,7 +25613,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.mobile",
+            "id": "azure.services.general.10822_icon_service_mobile",
             "name": "Mobile",
             "data": [
               "-0.461121*w",
@@ -25493,7 +25962,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.mobile_engagement",
+            "id": "azure.services.general.10823_icon_service_mobile_engagement",
             "name": "Mobile Engagement",
             "data": [
               "-0.461121*w",
@@ -26009,7 +26478,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.power",
+            "id": "azure.services.general.10824_icon_service_power",
             "name": "Power",
             "data": [
               "-0.078475*w",
@@ -26114,7 +26583,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.powershell",
+            "id": "azure.services.general.10825_icon_service_powershell",
             "name": "Powershell",
             "data": [
               "-w/2",
@@ -26403,7 +26872,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.power_up",
+            "id": "azure.services.general.10826_icon_service_power_up",
             "name": "Power Up",
             "data": [
               "-0.006656*w",
@@ -26888,7 +27357,123 @@
         },
         {
           "template": {
-            "id": "azure.services.general.process_explorer",
+            "id": "azure.services.general.10827_icon_service_feature_previews",
+            "name": "Feature Previews",
+            "data": [
+              "0.451342*w",
+              "-h/2",
+              "-0.902683*w",
+              "-0.478196*w",
+              "-0.499968*h",
+              "-0.499953*w",
+              "-0.484896*h",
+              "-w/2",
+              "-0.466293*h",
+              "0.946261*h",
+              "-0.49997*w",
+              "0.486417*h",
+              "-0.494639*w",
+              "0.492291*h",
+              "-0.486262*w",
+              "0.495105*h",
+              "-0.477885*w",
+              "0.497919*h",
+              "-0.467926*w",
+              "0.497181*h",
+              "-0.460598*w",
+              "0.493204*h",
+              "-0.015031*w",
+              "0.251315*h",
+              "-0.012068*w",
+              "0.249794*h",
+              "-0.008639*w",
+              "0.248767*h",
+              "-0.00501*w",
+              "0.248315*h",
+              "-0.006539*w",
+              "0.247491*h",
+              "w/2",
+              "-0.026046*h",
+              "-0.440247*h",
+              "0.499953*w",
+              "-0.484896*h",
+              "0.478196*w",
+              "-0.499968*h",
+              "0.451342*w",
+              "-h/2",
+              "-0.006539*w",
+              "0.247491*h",
+              "w/2",
+              "-0.026046*h",
+              "0.509191*h",
+              "0.499985*w",
+              "0.489572*h",
+              "0.494703*w",
+              "0.495435*h",
+              "0.486376*w",
+              "0.49827*h",
+              "0.478049*w",
+              "0.501104*h",
+              "0.468121*w",
+              "0.500417*h",
+              "0.460768*w",
+              "0.496498*h"
+            ],
+            "draw": [
+              {
+                "path": "M 0 1 h 2 C 3 4 5 6 7 8 v 9 C 10 11 12 13 14 15 C 16 17 18 19 20 21 L 22 23 C 24 25 26 27 28 29 L 30 31 L 32 33 v 34 C 35 36 37 38 39 40 Z",
+                "style": {
+                  "fillpaint": {
+                    "type": 2,
+                    "color": 4286895154
+                  },
+                  "strokepaint": {
+                    "type": 1
+                  },
+                  "strokewidth": 1
+                }
+              },
+              {
+                "path": "M 41 42 L 43 44 v 45 C 46 47 48 49 50 51 C 52 53 54 55 56 57 Z",
+                "style": {
+                  "fillpaint": {
+                    "type": 2,
+                    "color": 4285971501
+                  },
+                  "strokepaint": {
+                    "type": 1
+                  },
+                  "strokewidth": 1
+                }
+              }
+            ],
+            "default": {
+              "width": 44,
+              "height": 64,
+              "angle": 0
+            },
+            "texts": [
+              {
+                "text": "Feature Previews",
+                "external": "bottom"
+              }
+            ],
+            "libraryview": {
+              "width": 44,
+              "height": 64,
+              "scale": true,
+              "priority": 0,
+              "text": "\n"
+            }
+          },
+          "params": {
+            "width": 44,
+            "height": 64
+          }
+        },
+        {
+          "template": {
+            "id": "azure.services.general.10828_icon_service_process_explorer",
             "name": "Process Explorer",
             "data": [
               "0.223444*w",
@@ -27215,7 +27800,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.production_ready_database",
+            "id": "azure.services.general.10829_icon_service_production_ready_database",
             "name": "Production Ready Database",
             "data": [
               "0.000782*w",
@@ -27506,7 +28091,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.resource_group_list",
+            "id": "azure.services.general.10830_icon_service_resource_group_list",
             "name": "Resource Group List",
             "data": [
               "-0.032692*w",
@@ -27794,7 +28379,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.resource_linked",
+            "id": "azure.services.general.10831_icon_service_resource_linked",
             "name": "Resource Linked",
             "data": [
               "-0.490237*w",
@@ -28235,7 +28820,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.scheduler",
+            "id": "azure.services.general.10833_icon_service_scheduler",
             "name": "Scheduler",
             "data": [
               "w/2",
@@ -28768,7 +29353,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.search",
+            "id": "azure.services.general.10834_icon_service_search",
             "name": "Search",
             "data": [
               "-0.481729*w",
@@ -28970,7 +29555,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.server_farm",
+            "id": "azure.services.general.10835_icon_service_server_farm",
             "name": "Server Farm",
             "data": [
               "0.115878*w",
@@ -29527,7 +30112,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.ssd",
+            "id": "azure.services.general.10837_icon_service_ssd",
             "name": "SSD",
             "data": [
               "w/2",
@@ -29874,7 +30459,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.storage_azure_files",
+            "id": "azure.services.general.10838_icon_service_storage_azure_files",
             "name": "Storage Azure Files",
             "data": [
               "-w/2",
@@ -30258,7 +30843,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.storage_container",
+            "id": "azure.services.general.10839_icon_service_storage_container",
             "name": "Storage Container",
             "data": [
               "-w/2",
@@ -30678,7 +31263,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.storage_queue",
+            "id": "azure.services.general.10840_icon_service_storage_queue",
             "name": "Storage Queue",
             "data": [
               "-w/2",
@@ -31011,7 +31596,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.table",
+            "id": "azure.services.general.10841_icon_service_table",
             "name": "Table",
             "data": [
               "-w/2",
@@ -31572,7 +32157,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.tags",
+            "id": "azure.services.general.10842_icon_service_tags",
             "name": "Tags",
             "data": [
               "0.38346*w",
@@ -32038,7 +32623,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.tfs_vc_repository",
+            "id": "azure.services.general.10843_icon_service_tfs_vc_repository",
             "name": "TFS VC Repository",
             "data": [
               "-0.272164*w",
@@ -32352,7 +32937,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.toolbox",
+            "id": "azure.services.general.10844_icon_service_toolbox",
             "name": "Toolbox",
             "data": [
               "0.243235*w",
@@ -32625,7 +33210,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.versions",
+            "id": "azure.services.general.10845_icon_service_versions",
             "name": "Versions",
             "data": [
               "-w/2",
@@ -32833,7 +33418,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.website_power",
+            "id": "azure.services.general.10847_icon_service_website_power",
             "name": "Website Power",
             "data": [
               "-0.338967*w",
@@ -33784,7 +34369,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.website_staging",
+            "id": "azure.services.general.10848_icon_service_website_staging",
             "name": "Website Staging",
             "data": [
               "w/2",
@@ -34033,7 +34618,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.web_slots",
+            "id": "azure.services.general.10849_icon_service_web_slots",
             "name": "Web Slots",
             "data": [
               "0.414703*w",
@@ -34390,7 +34975,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.web_test",
+            "id": "azure.services.general.10850_icon_service_web_test",
             "name": "Web Test",
             "data": [
               "0.176582*w",
@@ -35288,7 +35873,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.workbooks",
+            "id": "azure.services.general.10851_icon_service_workbooks",
             "name": "Workbooks",
             "data": [
               "-0.405696*w",
@@ -35786,7 +36371,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.workflow",
+            "id": "azure.services.general.10852_icon_service_workflow",
             "name": "Workflow",
             "data": [
               "0.370799*w",
@@ -36186,7 +36771,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.backlog",
+            "id": "azure.services.general.10853_icon_service_backlog",
             "name": "Backlog",
             "data": [
               "-0.1472*w",
@@ -36584,7 +37169,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.media",
+            "id": "azure.services.general.10854_icon_service_media",
             "name": "Media",
             "data": [
               "0.012788*w",
@@ -36915,7 +37500,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.module",
+            "id": "azure.services.general.10855_icon_service_module",
             "name": "Module",
             "data": [
               "-0.466625*w",
@@ -37390,7 +37975,7 @@
         },
         {
           "template": {
-            "id": "azure.services.general.search_grid",
+            "id": "azure.services.general.10856_icon_service_search_grid",
             "name": "Search Grid",
             "data": [
               "-0.032692*w",
@@ -37674,373 +38259,6 @@
           "params": {
             "width": 64,
             "height": 63
-          }
-        },
-        {
-          "template": {
-            "id": "azure.services.general.resiliency",
-            "name": "Resiliency",
-            "data": [
-              "-w/2",
-              "-h/2",
-              "w/2",
-              "-h/2",
-              "w/2",
-              "h/2",
-              "-w/2",
-              "h/2",
-              "-0.38*w",
-              "-0.277778*h",
-              "-0.38*w",
-              "-0.296111*h",
-              "-0.365556*w",
-              "-0.311111*h",
-              "-0.348333*w",
-              "-0.311111*h",
-              "-0.236111*w",
-              "-0.311111*h",
-              "-0.126111*w",
-              "-0.352778*h",
-              "-0.018889*w",
-              "-0.437778*h",
-              "-0.007778*w",
-              "-0.446667*h",
-              "0.007778*w",
-              "-0.446667*h",
-              "0.018889*w",
-              "-0.437778*h",
-              "0.126111*w",
-              "-0.352778*h",
-              "0.235556*w",
-              "-0.311111*h",
-              "0.348333*w",
-              "-0.311111*h",
-              "0.365556*w",
-              "-0.311111*h",
-              "0.38*w",
-              "-0.296111*h",
-              "0.38*w",
-              "-0.277778*h",
-              "0.233333*h",
-              "0.38*w",
-              "0.177778*h",
-              "0.255*w",
-              "0.341111*h",
-              "0.011667*w",
-              "0.442222*h",
-              "0.004444*w",
-              "0.445556*h",
-              "-0.003889*w",
-              "0.445556*h",
-              "-0.011667*w",
-              "0.442222*h",
-              "-0.255*w",
-              "0.341111*h",
-              "-0.38*w",
-              "0.177778*h",
-              "-0.38*w",
-              "-0.044444*h",
-              "-0.233333*h",
-              "0.192222*w",
-              "0.215*h",
-              "0.181667*w",
-              "0.215*h",
-              "0.171667*w",
-              "0.209444*h",
-              "0.166667*w",
-              "0.199444*h",
-              "0.071111*w",
-              "0.016111*h",
-              "0.162222*w",
-              "-0.189444*h",
-              "0.166111*w",
-              "-0.198333*h",
-              "0.172778*w",
-              "-0.212778*h",
-              "0.189444*w",
-              "-0.218889*h",
-              "0.203889*w",
-              "-0.212778*h",
-              "0.218333*w",
-              "-0.206111*h",
-              "0.225*w",
-              "-0.189444*h",
-              "0.218333*w",
-              "-0.175*h",
-              "0",
-              "0.218333*w",
-              "-0.175*h",
-              "0.135*w",
-              "0.014444*h",
-              "0.217778*w",
-              "0.172778*h",
-              "0.225*w",
-              "0.186667*h",
-              "0.219444*w",
-              "0.203889*h",
-              "0.205556*w",
-              "0.211667*h",
-              "0.201111*w",
-              "0.213889*h",
-              "0.196667*w",
-              "0.215*h",
-              "0.192222*w",
-              "0.215*h",
-              "0",
-              "0.215*h",
-              "-0.016111*w",
-              "0.215*h",
-              "-0.028889*w",
-              "0.202222*h",
-              "-0.028889*w",
-              "0.186111*h",
-              "-0.372778*h",
-              "-0.028889*w",
-              "-0.202778*h",
-              "-0.016111*w",
-              "-0.215556*h",
-              "0",
-              "-0.215556*h",
-              "0.016111*w",
-              "-0.215556*h",
-              "0.028889*w",
-              "-0.202778*h",
-              "0.028889*w",
-              "-0.186667*h",
-              "0.372778*h",
-              "0.028889*w",
-              "0.202222*h",
-              "0.016111*w",
-              "0.215*h",
-              "0",
-              "0.215*h",
-              "-0.192222*w",
-              "0.215*h",
-              "-0.196667*w",
-              "0.215*h",
-              "-0.201111*w",
-              "0.213889*h",
-              "-0.205556*w",
-              "0.211667*h",
-              "-0.219444*w",
-              "0.204444*h",
-              "-0.225*w",
-              "0.187222*h",
-              "-0.217778*w",
-              "0.172778*h",
-              "-0.135*w",
-              "0.014444*h",
-              "-0.217778*w",
-              "-0.173333*h",
-              "-0.218333*w",
-              "-0.175*h",
-              "-0.225*w",
-              "-0.189444*h",
-              "-0.218333*w",
-              "-0.206667*h",
-              "-0.203889*w",
-              "-0.212778*h",
-              "-0.189444*w",
-              "-0.219444*h",
-              "-0.172778*w",
-              "-0.212778*h",
-              "-0.166111*w",
-              "-0.198333*h",
-              "-0.162222*w",
-              "-0.189444*h",
-              "-0.071111*w",
-              "0.016111*h",
-              "-0.166667*w",
-              "0.199444*h",
-              "-0.171667*w",
-              "0.209444*h",
-              "-0.181667*w",
-              "0.215*h",
-              "-0.192222*w",
-              "0.215*h",
-              "-0.363333*w",
-              "-0.286667*h",
-              "-0.360556*w",
-              "-0.292778*h",
-              "-0.355*w",
-              "-0.296667*h",
-              "-0.348333*w",
-              "-0.296667*h",
-              "-0.232778*w",
-              "-0.296667*h",
-              "-0.119444*w",
-              "-0.340556*h",
-              "-0.01*w",
-              "-0.426667*h",
-              "-0.007222*w",
-              "-0.428889*h",
-              "-0.003333*w",
-              "-0.43*h",
-              "0",
-              "-0.43*h",
-              "-0.014444*h",
-              "-0.006667*w",
-              "-0.444444*h",
-              "-0.013333*w",
-              "-0.442222*h",
-              "-0.018889*w",
-              "-0.437778*h",
-              "-0.126111*w",
-              "-0.352778*h",
-              "-0.235556*w",
-              "-0.311111*h",
-              "-0.348333*w",
-              "-0.311111*h",
-              "-0.362778*w",
-              "-0.311111*h",
-              "-0.375*w",
-              "-0.300556*h",
-              "-0.378889*w",
-              "-0.286667*h",
-              "0.015*w",
-              "0.360556*w",
-              "0.028889*h",
-              "0.335556*w",
-              "0.207222*h",
-              "0.216667*w",
-              "0.341667*h",
-              "0.006111*w",
-              "0.428889*h",
-              "0.003889*w",
-              "0.429444*h",
-              "0.002222*w",
-              "0.43*h",
-              "0",
-              "0.43*h",
-              "0.014444*h",
-              "0.003889*w",
-              "0.444444*h",
-              "0.007778*w",
-              "0.443889*h",
-              "0.011667*w",
-              "0.442222*h",
-              "0.227778*w",
-              "0.352778*h",
-              "0.35*w",
-              "0.213889*h",
-              "0.375*w",
-              "0.028889*h",
-              "-0.014444*w"
-            ],
-            "draw": [
-              {
-                "path": "M 0 1 L 2 3 L 4 5 L 6 7 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 1
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 8 9 C 10 11 12 13 14 15 C 16 17 18 19 20 21 C 22 23 24 25 26 27 C 28 29 30 31 32 33 C 34 35 36 37 38 39 v 40 C 41 42 43 44 45 46 C 47 48 49 50 51 52 C 53 54 55 56 57 58 v 59 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4279926138
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 60 61 C 62 63 64 65 66 67 C 68 69 70 71 72 73 C 74 75 76 77 78 79 C 80 81 82 83 84 85 h 86 C 87 88 89 90 91 92 C 93 94 95 96 97 98 C 99 100 101 102 103 104 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4282770886
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 105 106 C 107 108 109 110 111 112 v 113 C 114 115 116 117 118 119 C 120 121 122 123 124 125 v 126 C 127 128 129 130 131 132 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4288672484
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 133 134 C 135 136 137 138 139 140 C 141 142 143 144 145 146 C 147 148 149 150 151 152 C 153 154 155 156 157 158 C 159 160 161 162 163 164 C 165 166 167 168 169 170 C 171 172 173 174 175 176 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4282770886
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 177 178 C 179 180 181 182 183 184 C 185 186 187 188 189 190 C 191 192 193 194 195 196 v 197 C 198 199 200 201 202 203 C 204 205 206 207 208 209 C 210 211 212 213 214 215 h 216 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 1006632959
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 217 218 C 219 220 221 222 223 224 C 225 226 227 228 229 230 v 231 C 232 233 234 235 236 237 C 238 239 240 241 242 243 h 244 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4245178702
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              }
-            ],
-            "default": {
-              "width": 64,
-              "height": 64,
-              "angle": 0
-            },
-            "texts": [
-              {
-                "text": "Resiliency",
-                "external": "bottom"
-              }
-            ],
-            "libraryview": {
-              "width": 64,
-              "height": 64,
-              "scale": true,
-              "priority": 0,
-              "text": "\n"
-            }
-          },
-          "params": {
-            "width": 64,
-            "height": 64
           }
         }
       ]

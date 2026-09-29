@@ -10,7 +10,7 @@
       "objects": [
         {
           "template": {
-            "id": "azure.services.blockchain.blockchain_applications",
+            "id": "azure.services.blockchain.10210_icon_service_blockchain_applications",
             "name": "Blockchain Applications",
             "data": [
               "w/2",
@@ -382,7 +382,7 @@
         },
         {
           "template": {
-            "id": "azure.services.blockchain.outbound_connection",
+            "id": "azure.services.blockchain.10364_icon_service_outbound_connection",
             "name": "Outbound Connection",
             "data": [
               "0.313919*w",
@@ -613,7 +613,7 @@
         },
         {
           "template": {
-            "id": "azure.services.blockchain.azure_blockchain_service",
+            "id": "azure.services.blockchain.10366_icon_service_azure_blockchain_service",
             "name": "Azure Blockchain Service",
             "data": [
               "0.229444*w",
@@ -1112,7 +1112,7 @@
         },
         {
           "template": {
-            "id": "azure.services.blockchain.azure_token_service",
+            "id": "azure.services.blockchain.10367_icon_service_azure_token_service",
             "name": "Azure Token Service",
             "data": [
               "0.276078*w",
@@ -2219,7 +2219,7 @@
         },
         {
           "template": {
-            "id": "azure.services.blockchain.abs_member",
+            "id": "azure.services.blockchain.10374_icon_service_abs_member",
             "name": "ABS Member",
             "data": [
               "w/2",
@@ -2359,7 +2359,7 @@
         },
         {
           "template": {
-            "id": "azure.services.blockchain.consortium",
+            "id": "azure.services.blockchain.10375_icon_service_consortium",
             "name": "Consortium",
             "data": [
               "0.176136*w",

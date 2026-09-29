@@ -3,14 +3,14 @@
   "arrows": [],
   "library": [
     {
-      "name": "Azure AI & ML",
-      "id": "azure.services.ai_ml",
+      "name": "Azure AI + Machine Learning",
+      "id": "azure.services.ai_machine_learning",
       "category": "Azure",
       "group": "Network",
       "objects": [
         {
           "template": {
-            "id": "azure.services.ai_ml.batch_ai",
+            "id": "azure.services.ai_machine_learning.00028_icon_service_batch_ai",
             "name": "Batch AI",
             "data": [
               "0.157459*w",
@@ -725,7 +725,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.machine_learning_studio_classic_web_services",
+            "id": "azure.services.ai_machine_learning.00030_icon_service_machine_learning_studio_classic_web_services",
             "name": "Machine Learning Studio (Classic) Web Services",
             "data": [
               "0.356003*w",
@@ -1246,7 +1246,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.genomics",
+            "id": "azure.services.ai_machine_learning.00031_icon_service_genomics",
             "name": "Genomics",
             "data": [
               "0.30364*w",
@@ -1802,7 +1802,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.computer_vision",
+            "id": "azure.services.ai_machine_learning.00792_icon_service_computer_vision",
             "name": "Computer Vision",
             "data": [
               "-0.468628*w",
@@ -2243,7 +2243,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.custom_vision",
+            "id": "azure.services.ai_machine_learning.00793_icon_service_custom_vision",
             "name": "Custom Vision",
             "data": [
               "-0.007818*w",
@@ -2968,7 +2968,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.face_apis",
+            "id": "azure.services.ai_machine_learning.00794_icon_service_face_apis",
             "name": "Face APIs",
             "data": [
               "0.356992*w",
@@ -3361,7 +3361,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.content_moderators",
+            "id": "azure.services.ai_machine_learning.00795_icon_service_content_moderators",
             "name": "Content Moderators",
             "data": [
               "-0.466611*w",
@@ -3919,7 +3919,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.personalizers",
+            "id": "azure.services.ai_machine_learning.00796_icon_service_personalizers",
             "name": "Personalizers",
             "data": [
               "-0.103107*w",
@@ -4309,7 +4309,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.speech_services",
+            "id": "azure.services.ai_machine_learning.00797_icon_service_speech_services",
             "name": "Speech Services",
             "data": [
               "-0.094444*w",
@@ -4977,7 +4977,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.qna_makers",
+            "id": "azure.services.ai_machine_learning.00799_icon_service_qna_makers",
             "name": "QnA Makers",
             "data": [
               "-0.107504*w",
@@ -5367,7 +5367,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.translator_text",
+            "id": "azure.services.ai_machine_learning.00800_icon_service_translator_text",
             "name": "Translator Text",
             "data": [
               "-0.466667*w",
@@ -6005,7 +6005,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.language_understanding",
+            "id": "azure.services.ai_machine_learning.00801_icon_service_language_understanding",
             "name": "Language Understanding",
             "data": [
               "0",
@@ -6303,7 +6303,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.immersive_readers",
+            "id": "azure.services.ai_machine_learning.00812_icon_service_immersive_readers",
             "name": "Immersive Readers",
             "data": [
               "0.038889*w",
@@ -7286,7 +7286,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.anomaly_detector",
+            "id": "azure.services.ai_machine_learning.00814_icon_service_anomaly_detector",
             "name": "Anomaly Detector",
             "data": [
               "0.486665*w",
@@ -7621,7 +7621,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.form_recognizers",
+            "id": "azure.services.ai_machine_learning.00819_icon_service_form_recognizers",
             "name": "Form Recognizers",
             "data": [
               "-0.010553*w",
@@ -8313,7 +8313,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.azure_experimentation_studio",
+            "id": "azure.services.ai_machine_learning.01239_icon_service_azure_experimentation_studio",
             "name": "Azure Experimentation Studio",
             "data": [
               "0.480984*w",
@@ -8854,7 +8854,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.azure_object_understanding",
+            "id": "azure.services.ai_machine_learning.01688_icon_service_azure_object_understanding",
             "name": "Azure Object Understanding",
             "data": [
               "-0.06429*w",
@@ -9558,7 +9558,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.metrics_advisor",
+            "id": "azure.services.ai_machine_learning.02409_icon_service_metrics_advisor",
             "name": "Metrics Advisor",
             "data": [
               "-0.463291*w",
@@ -10327,7 +10327,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.azure_applied_ai_services",
+            "id": "azure.services.ai_machine_learning.02749_icon_service_azure_applied_ai_services",
             "name": "Azure Applied AI Services",
             "data": [
               "-0.178717*w",
@@ -10771,7 +10771,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.language",
+            "id": "azure.services.ai_machine_learning.02876_icon_service_language",
             "name": "Language",
             "data": [
               "-0.479889*w",
@@ -11366,7 +11366,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.frd_qa",
+            "id": "azure.services.ai_machine_learning.029455661_icon_service_frd_qa",
             "name": "FRD QA",
             "data": [
               "0.101312*w",
@@ -12101,7 +12101,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.cognitive_services_decisions",
+            "id": "azure.services.ai_machine_learning.03173_icon_service_cognitive_services_decisions",
             "name": "Cognitive Services Decisions",
             "data": [
               "0.423333*w",
@@ -12529,7 +12529,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.serverless_search",
+            "id": "azure.services.ai_machine_learning.03321_icon_service_serverless_search",
             "name": "Serverless Search",
             "data": [
               "0.305*w",
@@ -12895,7 +12895,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.bonsai",
+            "id": "azure.services.ai_machine_learning.03337_icon_service_bonsai",
             "name": "Bonsai",
             "data": [
               "-0.291471*w",
@@ -15444,7 +15444,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.content_safety",
+            "id": "azure.services.ai_machine_learning.03390_icon_service_content_safety",
             "name": "Content Safety",
             "data": [
               "-0.479889*w",
@@ -16270,7 +16270,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.azure_openai",
+            "id": "azure.services.ai_machine_learning.03438_icon_service_azure_openai",
             "name": "Azure OpenAI",
             "data": [
               "-w/2",
@@ -16375,7 +16375,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.ai_studio",
+            "id": "azure.services.ai_machine_learning.03513_icon_service_ai_studio",
             "name": "AI Studio",
             "data": [
               "0.183165*w",
@@ -16525,7 +16525,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.ai_foundry",
+            "id": "azure.services.ai_machine_learning.035746832_icon_service_ai_foundry",
             "name": "AI Foundry",
             "data": [
               "0.197355*w",
@@ -16806,7 +16806,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.foundry_application",
+            "id": "azure.services.ai_machine_learning.036509374_icon_service_foundry_application",
             "name": "Foundry Application",
             "data": [
               "0.20969*w",
@@ -17222,7 +17222,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.foundry_project",
+            "id": "azure.services.ai_machine_learning.036509415_icon_service_foundry_project",
             "name": "Foundry Project",
             "data": [
               "0.476901*w",
@@ -17797,7 +17797,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.planetary_computer_pro",
+            "id": "azure.services.ai_machine_learning.03755_icon_service_planetary_computer_pro",
             "name": "Planetary Computer Pro",
             "data": [
               "-0.335083*w",
@@ -18214,7 +18214,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.azure_ai_foundry_iq",
+            "id": "azure.services.ai_machine_learning.038470497_icon_service_azure_ai_foundry_iq",
             "name": "Azure AI Foundry IQ",
             "data": [
               "-w/2",
@@ -18814,7 +18814,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.azure_machine_learning",
+            "id": "azure.services.ai_machine_learning.038470510_icon_service_azure_machine_learning",
             "name": "Azure Machine Learning",
             "data": [
               "0.049712*w",
@@ -19235,7 +19235,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.foundry_agent_service",
+            "id": "azure.services.ai_machine_learning.038470523_icon_service_foundry_agent_service",
             "name": "Foundry Agent Service",
             "data": [
               "-0.253338*w",
@@ -19598,7 +19598,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.foundry_control_plane",
+            "id": "azure.services.ai_machine_learning.038470534_icon_service_foundry_control_plane",
             "name": "Foundry Control Plane",
             "data": [
               "0.121575*w",
@@ -20074,7 +20074,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.foundry_labs",
+            "id": "azure.services.ai_machine_learning.038470555_icon_service_foundry_labs",
             "name": "Foundry Labs",
             "data": [
               "-0.272394*w",
@@ -20526,7 +20526,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.foundry_local",
+            "id": "azure.services.ai_machine_learning.038470593_icon_service_foundry_local",
             "name": "Foundry Local",
             "data": [
               "0.146199*w",
@@ -20819,7 +20819,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.foundry_models",
+            "id": "azure.services.ai_machine_learning.038470614_icon_service_foundry_models",
             "name": "Foundry Models",
             "data": [
               "-0.127361*w",
@@ -21391,7 +21391,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.cognitive_search",
+            "id": "azure.services.ai_machine_learning.10044_icon_service_cognitive_search",
             "name": "Cognitive Search",
             "data": [
               "w/2",
@@ -21657,7 +21657,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.cognitive_services",
+            "id": "azure.services.ai_machine_learning.10162_icon_service_cognitive_services",
             "name": "Cognitive Services",
             "data": [
               "w/2",
@@ -22119,7 +22119,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.genomics_accounts",
+            "id": "azure.services.ai_machine_learning.10164_icon_service_genomics_accounts",
             "name": "Genomics Accounts",
             "data": [
               "0.30364*w",
@@ -22675,7 +22675,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.bot_services",
+            "id": "azure.services.ai_machine_learning.10165_icon_service_bot_services",
             "name": "Bot Services",
             "data": [
               "0",
@@ -23043,7 +23043,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.machine_learning",
+            "id": "azure.services.ai_machine_learning.10166_icon_service_machine_learning",
             "name": "Machine Learning",
             "data": [
               "0.43038*w",
@@ -23142,7 +23142,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.machine_learning_studio_workspaces",
+            "id": "azure.services.ai_machine_learning.10167_icon_service_machine_learning_studio_workspaces",
             "name": "Machine Learning Studio Workspaces",
             "data": [
               "-0.176886*w",
@@ -23580,7 +23580,7 @@
         },
         {
           "template": {
-            "id": "azure.services.ai_ml.machine_learning_studio_web_service_plans",
+            "id": "azure.services.ai_machine_learning.10168_icon_service_machine_learning_studio_web_service_plans",
             "name": "Machine Learning Studio Web Service Plans",
             "data": [
               "0.04877*w",
@@ -24055,713 +24055,6 @@
             "texts": [
               {
                 "text": "Machine Learning Studio\nWeb Service Plans",
-                "external": "bottom"
-              }
-            ],
-            "libraryview": {
-              "width": 64,
-              "height": 64,
-              "scale": true,
-              "priority": 0,
-              "text": "\n"
-            }
-          },
-          "params": {
-            "width": 64,
-            "height": 64
-          }
-        },
-        {
-          "template": {
-            "id": "azure.services.ai_ml.ai_at_edge",
-            "name": "AI at Edge",
-            "data": [
-              "-0.045427*w",
-              "-0.00805*h",
-              "-0.000283*h",
-              "-0.032412*w",
-              "-0.061075*h",
-              "-0.006156*w",
-              "-0.108208*h",
-              "0.030636*w",
-              "-0.145993*h",
-              "-0.257985*h",
-              "0.030636*w",
-              "-0.457002*h",
-              "-0.012128*w",
-              "-h/2",
-              "-0.064865*w",
-              "-h/2",
-              "-0.339634*w",
-              "-0.457236*w",
-              "-0.500057*h",
-              "-w/2",
-              "-0.457059*h",
-              "-w/2",
-              "-0.403978*h",
-              "0.725631*h",
-              "-w/2",
-              "0.339328*h",
-              "-0.485745*w",
-              "0.353661*h",
-              "-0.468166*w",
-              "0.353661*h",
-              "0.274276*w",
-              "-0.027848*w",
-              "0.18456*h",
-              "-0.054047*w",
-              "0.124228*h",
-              "-0.060414*w",
-              "0.057041*h",
-              "-0.045483*w",
-              "-0.007767*h",
-              "-0.000283*h",
-              "-0.308942*w",
-              "0.033531*h",
-              "-0.33238*w",
-              "0.033531*h",
-              "-0.351368*w",
-              "0.01444*h",
-              "-0.351368*w",
-              "-0.009127*h",
-              "-0.351368*w",
-              "-0.032693*h",
-              "-0.33238*w",
-              "-0.051841*h",
-              "-0.308942*w",
-              "-0.051841*h",
-              "-0.285503*w",
-              "-0.051841*h",
-              "-0.266516*w",
-              "-0.03275*h",
-              "-0.266516*w",
-              "-0.009127*h",
-              "-0.266516*w",
-              "0.014497*h",
-              "-0.285503*w",
-              "0.033531*h",
-              "-0.308942*w",
-              "0.033531*h",
-              "-0.308942*w",
-              "-0.115855*h",
-              "-0.33238*w",
-              "-0.115855*h",
-              "-0.351368*w",
-              "-0.134947*h",
-              "-0.351368*w",
-              "-0.15857*h",
-              "-0.351368*w",
-              "-0.182193*h",
-              "-0.33238*w",
-              "-0.201284*h",
-              "-0.308942*w",
-              "-0.201284*h",
-              "-0.285503*w",
-              "-0.201284*h",
-              "-0.266516*w",
-              "-0.182193*h",
-              "-0.266516*w",
-              "-0.15857*h",
-              "-0.266516*w",
-              "-0.134947*h",
-              "-0.285503*w",
-              "-0.115855*h",
-              "-0.308942*w",
-              "-0.115855*h",
-              "-0.308942*w",
-              "-0.265242*h",
-              "-0.33238*w",
-              "-0.265242*h",
-              "-0.351368*w",
-              "-0.284333*h",
-              "-0.351368*w",
-              "-0.307899*h",
-              "-0.351368*w",
-              "-0.331466*h",
-              "-0.33238*w",
-              "-0.350614*h",
-              "-0.308942*w",
-              "-0.350614*h",
-              "-0.285503*w",
-              "-0.350614*h",
-              "-0.266516*w",
-              "-0.331522*h",
-              "-0.266516*w",
-              "-0.307899*h",
-              "-0.266516*w",
-              "-0.284276*h",
-              "-0.285503*w",
-              "-0.265242*h",
-              "-0.308942*w",
-              "-0.265242*h",
-              "-0.160366*w",
-              "0.033531*h",
-              "-0.183805*w",
-              "0.033531*h",
-              "-0.202792*w",
-              "0.01444*h",
-              "-0.202792*w",
-              "-0.009127*h",
-              "-0.202792*w",
-              "-0.032693*h",
-              "-0.183805*w",
-              "-0.051841*h",
-              "-0.160366*w",
-              "-0.051841*h",
-              "-0.136928*w",
-              "-0.051841*h",
-              "-0.11794*w",
-              "-0.03275*h",
-              "-0.11794*w",
-              "-0.009127*h",
-              "-0.11794*w",
-              "0.014497*h",
-              "-0.136928*w",
-              "0.033531*h",
-              "-0.160366*w",
-              "0.033531*h",
-              "-0.160366*w",
-              "-0.115855*h",
-              "-0.183805*w",
-              "-0.115855*h",
-              "-0.202792*w",
-              "-0.134947*h",
-              "-0.202792*w",
-              "-0.15857*h",
-              "-0.202792*w",
-              "-0.182193*h",
-              "-0.183805*w",
-              "-0.201284*h",
-              "-0.160366*w",
-              "-0.201284*h",
-              "-0.136928*w",
-              "-0.201284*h",
-              "-0.11794*w",
-              "-0.182193*h",
-              "-0.11794*w",
-              "-0.15857*h",
-              "-0.11794*w",
-              "-0.134947*h",
-              "-0.136928*w",
-              "-0.115855*h",
-              "-0.160366*w",
-              "-0.115855*h",
-              "-0.160366*w",
-              "-0.265242*h",
-              "-0.183805*w",
-              "-0.265242*h",
-              "-0.202792*w",
-              "-0.284333*h",
-              "-0.202792*w",
-              "-0.307899*h",
-              "-0.202792*w",
-              "-0.331466*h",
-              "-0.183805*w",
-              "-0.350614*h",
-              "-0.160366*w",
-              "-0.350614*h",
-              "-0.136928*w",
-              "-0.350614*h",
-              "-0.11794*w",
-              "-0.331522*h",
-              "-0.11794*w",
-              "-0.307899*h",
-              "-0.11794*w",
-              "-0.284276*h",
-              "-0.136928*w",
-              "-0.265242*h",
-              "-0.160366*w",
-              "-0.265242*h",
-              "0.372682*w",
-              "-0.067703*h",
-              "0.302756*w",
-              "-0.138011*h",
-              "0.189134*w",
-              "-0.13776*h",
-              "0.118899*w",
-              "-0.067142*h",
-              "0.048665*w",
-              "0.003475*h",
-              "0.048415*w",
-              "0.117718*h",
-              "0.118342*w",
-              "0.188025*h",
-              "0.188268*w",
-              "0.258333*h",
-              "0.30189*w",
-              "0.258082*h",
-              "0.372124*w",
-              "0.187465*h",
-              "0.442359*w",
-              "0.116847*h",
-              "0.442608*w",
-              "0.002605*h",
-              "0.372682*w",
-              "-0.067703*h",
-              "0.46363*w",
-              "-0.070875*h",
-              "0.390947*w",
-              "-0.19205*h",
-              "0.234371*w",
-              "-0.231082*h",
-              "0.113798*w",
-              "-0.15806*h",
-              "0.055821*w",
-              "-0.122937*h",
-              "0.014127*w",
-              "-0.06606*h",
-              "-0.002099*w",
-              "0.000051*h",
-              "-0.016918*w",
-              "0.064405*h",
-              "-0.007114*w",
-              "0.132046*h",
-              "0.025283*w",
-              "0.189489*h",
-              "-0.168987*w",
-              "0.387311*h",
-              "-0.194679*w",
-              "0.412974*h",
-              "-0.194791*w",
-              "0.454725*h",
-              "-0.169212*w",
-              "0.480557*h",
-              "-0.169156*w",
-              "0.480614*h",
-              "-0.169043*w",
-              "0.480727*h",
-              "-0.168987*w",
-              "0.480784*h",
-              "-0.156704*w",
-              "0.49319*h",
-              "-0.139914*w",
-              "0.500158*h",
-              "-0.122504*w",
-              "0.499988*h",
-              "-0.105038*w",
-              "0.500328*h",
-              "-0.088191*w",
-              "0.49336*h",
-              "-0.076021*w",
-              "0.480784*h",
-              "0.117404*w",
-              "0.283811*h",
-              "0.138419*w",
-              "0.296104*h",
-              "0.161069*w",
-              "0.305395*h",
-              "0.18462*w",
-              "0.311343*h",
-              "0.321928*w",
-              "0.344484*h",
-              "0.459967*w",
-              "0.259452*h",
-              "0.492928*w",
-              "0.121395*h",
-              "0.508591*w",
-              "0.055908*h",
-              "0.497999*w",
-              "-0.013205*h",
-              "0.463517*w",
-              "-0.070932*h",
-              "0.418781*w",
-              "0.1044*h",
-              "0.399342*w",
-              "0.184957*h",
-              "0.327731*w",
-              "0.241777*h",
-              "0.245302*w",
-              "0.242117*h",
-              "0.23099*w",
-              "0.24223*h",
-              "0.216736*w",
-              "0.240247*h",
-              "0.202988*w",
-              "0.236282*h",
-              "0.181972*w",
-              "0.231523*h",
-              "0.162196*w",
-              "0.222459*h",
-              "0.144899*w",
-              "0.2096*h",
-              "0.126644*w",
-              "0.19708*h",
-              "0.110868*w",
-              "0.181218*h",
-              "0.098416*w",
-              "0.162863*h",
-              "0.069963*w",
-              "0.120546*h",
-              "0.06061*w",
-              "0.068088*h",
-              "0.072667*w",
-              "0.018462*h",
-              "0.091204*w",
-              "-0.062491*h",
-              "0.162759*w",
-              "-0.119878*h",
-              "0.245358*w",
-              "-0.120104*h",
-              "0.259894*w",
-              "-0.120104*h",
-              "0.274374*w",
-              "-0.118405*h",
-              "0.288516*w",
-              "-0.115119*h",
-              "0.334548*w",
-              "-0.102883*h",
-              "0.373932*w",
-              "-0.072858*h",
-              "0.398103*w",
-              "-0.031673*h",
-              "0.422894*w",
-              "0.009058*h",
-              "0.430387*w",
-              "0.05806*h",
-              "0.418837*w",
-              "0.1044*h"
-            ],
-            "draw": [
-              {
-                "path": "M 0 1 v 2 C 3 4 5 6 7 8 v 9 C 10 11 12 13 14 15 h 16 C 17 18 19 20 21 22 v 23 C 24 25 26 27 28 29 h 30 L 31 32 C 33 34 35 36 37 38 v 39 Z M 40 41 C 42 43 44 45 46 47 C 48 49 50 51 52 53 C 54 55 56 57 58 59 C 60 61 62 63 64 65 Z M 66 67 C 68 69 70 71 72 73 C 74 75 76 77 78 79 C 80 81 82 83 84 85 C 86 87 88 89 90 91 Z M 92 93 C 94 95 96 97 98 99 C 100 101 102 103 104 105 C 106 107 108 109 110 111 C 112 113 114 115 116 117 Z M 118 119 C 120 121 122 123 124 125 C 126 127 128 129 130 131 C 132 133 134 135 136 137 C 138 139 140 141 142 143 Z M 144 145 C 146 147 148 149 150 151 C 152 153 154 155 156 157 C 158 159 160 161 162 163 C 164 165 166 167 168 169 Z M 170 171 C 172 173 174 175 176 177 C 178 179 180 181 182 183 C 184 185 186 187 188 189 C 190 191 192 193 194 195 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4280519897
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 196 197 C 198 199 200 201 202 203 C 204 205 206 207 208 209 C 210 211 212 213 214 215 C 216 217 218 219 220 221 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4285183203
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 222 223 C 224 225 226 227 228 229 C 230 231 232 233 234 235 C 236 237 238 239 240 241 L 242 243 C 244 245 246 247 248 249 C 250 251 252 253 254 255 C 256 257 258 259 260 261 C 262 263 264 265 266 267 L 268 269 C 270 271 272 273 274 275 C 276 277 278 279 280 281 C 282 283 284 285 286 287 Z M 288 289 C 290 291 292 293 294 295 C 296 297 298 299 300 301 C 302 303 304 305 306 307 C 308 309 310 311 312 313 C 314 315 316 317 318 319 C 320 321 322 323 324 325 C 326 327 328 329 330 331 C 332 333 334 335 336 337 C 338 339 340 341 342 343 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4282503918
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              }
-            ],
-            "default": {
-              "width": 64,
-              "height": 64,
-              "angle": 0
-            },
-            "texts": [
-              {
-                "text": "AI at Edge",
-                "external": "bottom"
-              }
-            ],
-            "libraryview": {
-              "width": 64,
-              "height": 64,
-              "scale": true,
-              "priority": 0,
-              "text": "\n"
-            }
-          },
-          "params": {
-            "width": 64,
-            "height": 64
-          }
-        },
-        {
-          "template": {
-            "id": "azure.services.ai_ml.ai_gateway",
-            "name": "AI Gateway",
-            "data": [
-              "0.112222*w",
-              "-0.436111*h",
-              "0.081667*w",
-              "-0.463889*h",
-              "0.042222*w",
-              "-0.479444*h",
-              "0",
-              "-0.479444*h",
-              "-0.045*w",
-              "-0.479444*h",
-              "-0.086667*w",
-              "-0.462222*h",
-              "-0.118333*w",
-              "-0.430556*h",
-              "-0.43*w",
-              "-0.118333*h",
-              "-0.461667*w",
-              "-0.086667*h",
-              "-0.478889*w",
-              "-0.045*h",
-              "-0.478889*w",
-              "0",
-              "-0.478889*w",
-              "0.045*h",
-              "-0.461667*w",
-              "0.086667*h",
-              "-0.43*w",
-              "0.118333*h",
-              "-0.276111*w",
-              "0.272222*h",
-              "-0.209444*w",
-              "0.338889*h",
-              "-0.163333*w",
-              "0.385*h",
-              "-0.091667*w",
-              "0.391111*h",
-              "-0.038889*w",
-              "0.357222*h",
-              "-0.036111*w",
-              "0.355556*h",
-              "-0.034444*w",
-              "0.352778*h",
-              "-0.034444*w",
-              "0.35*h",
-              "-0.034444*w",
-              "0.347222*h",
-              "-0.035*w",
-              "0.343889*h",
-              "-0.037222*w",
-              "0.341667*h",
-              "-0.345556*w",
-              "0.033333*h",
-              "-0.354444*w",
-              "0.024444*h",
-              "-0.359444*w",
-              "0.012222*h",
-              "-0.359444*w",
-              "0",
-              "-0.359444*w",
-              "-0.012222*h",
-              "-0.354444*w",
-              "-0.024444*h",
-              "-0.345556*w",
-              "-0.033333*h",
-              "-0.134444*w",
-              "-0.244444*h",
-              "-0.033333*w",
-              "-0.345556*h",
-              "-0.011667*w",
-              "-0.366667*h",
-              "0.021111*w",
-              "-0.399444*h",
-              "0.063333*w",
-              "-0.416667*h",
-              "0.106111*w",
-              "-0.418333*h",
-              "0.110556*w",
-              "-0.418333*h",
-              "0.113889*w",
-              "-0.421111*h",
-              "0.115556*w",
-              "-0.425*h",
-              "0.116667*w",
-              "-0.428889*h",
-              "0.115556*w",
-              "-0.433333*h",
-              "0.112778*w",
-              "-0.435556*h",
-              "0.43*w",
-              "-0.118333*h",
-              "0.209444*w",
-              "-0.338889*h",
-              "0.163333*w",
-              "-0.385*h",
-              "0.091667*w",
-              "-0.391111*h",
-              "0.038889*w",
-              "-0.357222*h",
-              "0.036111*w",
-              "-0.355556*h",
-              "0.034444*w",
-              "-0.352778*h",
-              "0.034444*w",
-              "-0.35*h",
-              "0.034444*w",
-              "-0.347222*h",
-              "0.035*w",
-              "-0.343889*h",
-              "0.037222*w",
-              "-0.341667*h",
-              "0.345556*w",
-              "-0.033333*h",
-              "0.354444*w",
-              "-0.024444*h",
-              "0.359444*w",
-              "-0.012222*h",
-              "0.359444*w",
-              "0",
-              "0.359444*w",
-              "0.012222*h",
-              "0.354444*w",
-              "0.024444*h",
-              "0.345556*w",
-              "0.033333*h",
-              "0.134444*w",
-              "0.243889*h",
-              "0.033333*w",
-              "0.345*h",
-              "0.011667*w",
-              "0.366111*h",
-              "-0.021111*w",
-              "0.398889*h",
-              "-0.062778*w",
-              "0.415556*h",
-              "-0.105556*w",
-              "0.417778*h",
-              "-0.000556*w",
-              "-0.11*w",
-              "0.417778*h",
-              "-0.113889*w",
-              "0.420556*h",
-              "-0.115*w",
-              "0.424444*h",
-              "-0.116667*w",
-              "0.428333*h",
-              "-0.115*w",
-              "0.432778*h",
-              "-0.112222*w",
-              "0.435*h",
-              "-0.081667*w",
-              "0.462778*h",
-              "-0.041667*w",
-              "0.478333*h",
-              "0",
-              "0.478333*h",
-              "0.044444*w",
-              "0.478333*h",
-              "0.086667*w",
-              "0.461111*h",
-              "0.118333*w",
-              "0.429444*h",
-              "0.430556*w",
-              "0.117222*h",
-              "0.462222*w",
-              "0.085556*h",
-              "0.479444*w",
-              "0.043889*h",
-              "0.479444*w",
-              "-0.001111*h",
-              "0.479444*w",
-              "-0.046111*h",
-              "0.462222*w",
-              "-0.087778*h",
-              "0.430556*w",
-              "-0.119444*h",
-              "0",
-              "0.143889*h",
-              "0.079444*w",
-              "0.143889*h",
-              "0.143889*w",
-              "0.079444*h",
-              "0.143889*w",
-              "0",
-              "0.143889*w",
-              "-0.079444*h",
-              "0.079444*w",
-              "-0.143889*h",
-              "0",
-              "-0.143889*h",
-              "-0.079444*w",
-              "-0.143889*h",
-              "-0.143889*w",
-              "-0.079444*h",
-              "-0.143889*w",
-              "0",
-              "-0.143889*w",
-              "0.079444*h",
-              "-0.079444*w",
-              "0.143889*h",
-              "0",
-              "0.143889*h",
-              "-w/2",
-              "-h/2",
-              "w/2",
-              "-h/2",
-              "w/2",
-              "h/2",
-              "-w/2",
-              "h/2"
-            ],
-            "draw": [
-              {
-                "path": "M 0 1 C 2 3 4 5 6 7 C 8 9 10 11 12 13 L 14 15 C 16 17 18 19 20 21 C 22 23 24 25 26 27 L 28 29 L 30 31 C 32 33 34 35 36 37 C 38 39 40 41 42 43 C 44 45 46 47 48 49 L 50 51 C 52 53 54 55 56 57 C 58 59 60 61 62 63 L 64 65 L 66 67 L 68 69 C 70 71 72 73 74 75 C 76 77 78 79 80 81 C 82 83 84 85 86 87 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4282750463
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 88 89 L 90 91 C 92 93 94 95 96 97 C 98 99 100 101 102 103 C 104 105 106 107 108 109 L 110 111 C 112 113 114 115 116 117 C 118 119 120 121 122 123 L 124 125 L 126 127 L 128 129 C 130 131 132 133 134 135 h 136 C 137 138 139 140 141 142 C 143 144 145 146 147 148 C 149 150 151 152 153 154 C 155 156 157 158 159 160 L 161 162 C 163 164 165 166 167 168 C 169 170 171 172 173 174 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4281957107
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 175 176 C 177 178 179 180 181 182 C 183 184 185 186 187 188 C 189 190 191 192 193 194 C 195 196 197 198 199 200 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 2,
-                    "color": 4285031670
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              },
-              {
-                "path": "M 201 202 L 203 204 L 205 206 L 207 208 Z",
-                "style": {
-                  "fillpaint": {
-                    "type": 1
-                  },
-                  "strokepaint": {
-                    "type": 1
-                  },
-                  "strokewidth": 1
-                }
-              }
-            ],
-            "default": {
-              "width": 64,
-              "height": 64,
-              "angle": 0
-            },
-            "texts": [
-              {
-                "text": "AI Gateway",
                 "external": "bottom"
               }
             ],

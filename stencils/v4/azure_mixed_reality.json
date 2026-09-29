@@ -10,7 +10,7 @@
       "objects": [
         {
           "template": {
-            "id": "azure.services.mixed_reality.remote_rendering",
+            "id": "azure.services.mixed_reality.00698_icon_service_remote_rendering",
             "name": "Remote Rendering",
             "data": [
               "w/2",
@@ -469,7 +469,7 @@
         },
         {
           "template": {
-            "id": "azure.services.mixed_reality.spatial_anchor_accounts",
+            "id": "azure.services.mixed_reality.10352_icon_service_spatial_anchor_accounts",
             "name": "Spatial Anchor Accounts",
             "data": [
               "0.385269*w",
