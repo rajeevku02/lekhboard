@@ -35,9 +35,13 @@ make -C svg2lekh lekhboard      # writes aws_*.json, azure_*.json and gcp_*.json
 ```
 
 (`LEKHBOARD_V4=<dir>` overrides the destination), then rerun the index generator
-in the same commit. A hand edit to generated output is lost at the next
-regeneration. Sixty-one unrelated files remain byte-identical to their v3
-namesakes. The six `mscae_*.json` files retain their paths, IDs and shape data;
+in the same commit. During the authorized pre-release v4 migration, remove only
+the explicitly retired Azure/GCP paths first with
+`LEKHBOARD_PRE_RELEASE_REFRESH=1 make -C svg2lekh lekhboard-clean-retired`; the
+normal `lekhboard` target refuses to copy while those stale paths remain. Do not
+run that cleanup after a v4-consuming app ships. A hand edit to generated output
+is lost at the next regeneration. Sixty-one unrelated files remain byte-identical
+to their v3 namesakes. The six `mscae_*.json` files retain their paths, IDs and shape data;
 only their library names/category metadata differ from v3. v3 itself remains
 unchanged, including its 21 old AWS `aws_*.json` files.
 
