@@ -141,6 +141,7 @@
                    "M 8 9 L 12 13",
                    "M 14 15 L 16 17"],
           "texts": [{"text": "Actor", "external": "bottom"}], "images": "",
+          "libraryview": {"text": "\n"},
           "primitive_for_distance": true, "primitive_for_inside": false, "primitive_for_intersection": false,
           "name": "Actor"
         },
