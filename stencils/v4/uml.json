@@ -157,6 +157,7 @@
                "M 8 9 L 12 13",
                "M 14 15 L 16 17"],
       "name": "Actor",
+      "texts": [{"text": "Actor", "external": "bottom"}],
       "default": {"width": 48, "height": 68}
     },
     {
