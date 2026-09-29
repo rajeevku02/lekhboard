@@ -1,0 +1,13 @@
+{
+  "templates": [],
+  "arrows": [],
+  "library": [
+    {
+      "name": "GCP Media Services",
+      "id": "gcp.services.media_services",
+      "category": "Google Cloud Platform",
+      "group": "Network",
+      "objects": []
+    }
+  ]
+}

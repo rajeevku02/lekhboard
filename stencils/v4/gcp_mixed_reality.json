@@ -1,0 +1,13 @@
+{
+  "templates": [],
+  "arrows": [],
+  "library": [
+    {
+      "name": "GCP Mixed Reality",
+      "id": "gcp.services.mixed_reality",
+      "category": "Google Cloud Platform",
+      "group": "Network",
+      "objects": []
+    }
+  ]
+}
