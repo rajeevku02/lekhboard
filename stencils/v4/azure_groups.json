@@ -3382,8 +3382,7 @@
                 "path": "M 0 1 L 2 3 L 4 5 L 6 7 Z",
                 "style": {
                   "fillpaint": {
-                    "type": 2,
-                    "color": 4294967295
+                    "type": 1
                   },
                   "strokepaint": {
                     "type": 2,
@@ -3468,8 +3467,7 @@
                 "path": "M 0 1 L 2 3 L 4 5 L 6 7 Z",
                 "style": {
                   "fillpaint": {
-                    "type": 2,
-                    "color": 4294967295
+                    "type": 1
                   },
                   "strokepaint": {
                     "type": 2,
@@ -3635,8 +3633,7 @@
                 "path": "M 0 1 L 2 3 L 4 5 L 6 7 Z",
                 "style": {
                   "fillpaint": {
-                    "type": 2,
-                    "color": 4294967295
+                    "type": 1
                   },
                   "strokepaint": {
                     "type": 2,
@@ -3716,8 +3713,7 @@
                 "path": "M 0 1 L 2 3 L 4 5 L 6 7 Z",
                 "style": {
                   "fillpaint": {
-                    "type": 2,
-                    "color": 4294967295
+                    "type": 1
                   },
                   "strokepaint": {
                     "type": 2,
@@ -3964,8 +3960,7 @@
                 "path": "M 0 1 L 2 3 L 4 5 L 6 7 Z",
                 "style": {
                   "fillpaint": {
-                    "type": 2,
-                    "color": 4294967295
+                    "type": 1
                   },
                   "strokepaint": {
                     "type": 2,
@@ -4045,8 +4040,7 @@
                 "path": "M 0 1 L 2 3 L 4 5 L 6 7 Z",
                 "style": {
                   "fillpaint": {
-                    "type": 2,
-                    "color": 4294967295
+                    "type": 1
                   },
                   "strokepaint": {
                     "type": 2,
@@ -4145,8 +4139,7 @@
                 "path": "M 0 1 L 2 3 L 4 5 L 6 7 Z",
                 "style": {
                   "fillpaint": {
-                    "type": 2,
-                    "color": 4294967295
+                    "type": 1
                   },
                   "strokepaint": {
                     "type": 2,
