@@ -23,6 +23,11 @@
  * Where an id is in both sources the PUBLISHED definition wins, because that is
  * the one the apps' pickers serve.
  *
+ * Search keywords and the `container` flag come from the hand-authored
+ * tools/stencil-keywords.json, which is validated here: a wrong shape, or an id
+ * or library the catalogue does not carry, FAILS the build naming the problem
+ * (lekhboard has no test runner, so this is the test).
+ *
  * Usage:
  *   node tools/generate-stencil-index.js [options]
  *
@@ -43,6 +48,7 @@ const path = require('path');
 const REPO_ROOT = path.resolve(__dirname, '..');
 const DEFAULT_PUBLISHED_DIR = path.join(REPO_ROOT, 'stencils', 'v4');
 const NOTES_FILE = path.join(__dirname, 'text-syntax-notes.json');
+const KEYWORDS_FILE = path.join(__dirname, 'stencil-keywords.json');
 
 /* The core files that are NOT catalogues. They carry no `library` array and are
  * listed by name so that a core file which unexpectedly loses its library is a
@@ -171,6 +177,13 @@ function collectPlacements(dir, source, files, dangling) {
     return { rows: rows, libraryFiles: libraryFiles };
 }
 
+/*
+ * The size a shape is given when it is placed, in the order the apps take it:
+ * the placement's own params, then the template's params, then the template's
+ * `default` ({ width, height } — e.g. avabodh.uml.lifeline 100x200), and only
+ * then `libraryview`, which is the size of the picker's thumbnail and not of the
+ * placed shape.
+ */
 function defaultSize(template, placementParams) {
     const from = (o) => {
         if (!o || typeof o !== 'object') { return null; }
@@ -180,6 +193,7 @@ function defaultSize(template, placementParams) {
     };
     return from(placementParams)
         || from(template.params)
+        || from(template.default)
         || from(template.libraryview)
         || null;
 }
@@ -247,6 +261,7 @@ function row(template, placementParams, categ, file, source) {
         category: categ.category || categ.name || '',
         group: categ.group || '',
         library: categ.id || '',
+        library_name: typeof categ.name === 'string' ? categ.name : (categ.id || ''),
         file: file,
         source: source,
         default_size: defaultSize(template, placementParams),
@@ -257,6 +272,81 @@ function row(template, placementParams, categ, file, source) {
         has_title: titleIndex(template) !== -1,
         _template: template,
     };
+}
+
+// --- keywords and containers -----------------------------------------------
+
+/*
+ * Validate tools/stencil-keywords.json against the built catalogue. Every problem
+ * is collected and reported together, so one run names them all.
+ *
+ *   { "libraries":  { "<library id>":  ["keyword", ...] },
+ *     "templates":  { "<template id>": ["keyword", ...] },
+ *     "containers": { "libraries": ["<library id>", ...], "ids": ["<template id>", ...] } }
+ *
+ * Keys starting with _ are commentary, at the top level and inside the maps.
+ */
+function validateKeywords(kw, ids, libraries) {
+    const problems = [];
+    const isObject = (v) => !!v && typeof v === 'object' && !Array.isArray(v);
+    const isStringList = (v) => Array.isArray(v) && v.length > 0
+        && v.every((s) => typeof s === 'string' && s.trim() !== '');
+    if (!isObject(kw)) {
+        return ['the file must hold a JSON object'];
+    }
+    for (const k of Object.keys(kw)) {
+        if (!k.startsWith('_') && !['libraries', 'templates', 'containers'].includes(k)) {
+            problems.push('unknown top-level key "' + k + '" (expected libraries, templates, containers)');
+        }
+    }
+    const checkMap = (key, known, what) => {
+        const m = kw[key];
+        if (m === undefined) { return; }
+        if (!isObject(m)) { problems.push('"' + key + '" must be an object of ' + what + ' → keyword list'); return; }
+        for (const [k, v] of Object.entries(m)) {
+            if (k.startsWith('_')) { continue; }
+            if (!known.has(k)) { problems.push(key + ': ' + what + ' "' + k + '" is not in the catalogue'); }
+            if (!isStringList(v)) { problems.push(key + ': "' + k + '" must be a non-empty array of non-empty strings'); }
+        }
+    };
+    checkMap('libraries', libraries, 'library');
+    checkMap('templates', ids, 'template id');
+    const c = kw.containers;
+    if (c !== undefined) {
+        if (!isObject(c)) {
+            problems.push('"containers" must be an object with "libraries" and/or "ids"');
+        } else {
+            for (const k of Object.keys(c)) {
+                if (!k.startsWith('_') && k !== 'libraries' && k !== 'ids') {
+                    problems.push('containers: unknown key "' + k + '" (expected libraries, ids)');
+                }
+            }
+            for (const [key, known, what] of [['libraries', libraries, 'library'], ['ids', ids, 'template id']]) {
+                if (c[key] === undefined) { continue; }
+                if (!isStringList(c[key])) {
+                    problems.push('containers.' + key + ' must be a non-empty array of non-empty strings');
+                    continue;
+                }
+                for (const v of c[key]) {
+                    if (!known.has(v)) { problems.push('containers.' + key + ': ' + what + ' "' + v + '" is not in the catalogue'); }
+                }
+            }
+        }
+    }
+    return problems;
+}
+
+/* keywords (library's, then template's, de-duplicated) and container: true, only when present. */
+function applyKeywords(rows, kw) {
+    const libs = kw.libraries || {};
+    const tpls = kw.templates || {};
+    const containerLibs = new Set((kw.containers && kw.containers.libraries) || []);
+    const containerIds = new Set((kw.containers && kw.containers.ids) || []);
+    for (const r of rows) {
+        const words = [...new Set([].concat(libs[r.library] || [], tpls[r.id] || []))];
+        if (words.length) { r.keywords = words; }
+        if (containerLibs.has(r.library) || containerIds.has(r.id)) { r.container = true; }
+    }
 }
 
 // --- text syntax -----------------------------------------------------------
@@ -510,6 +600,15 @@ function main() {
         }
     }
 
+    const keywords = readJson(KEYWORDS_FILE);
+    const keywordProblems = validateKeywords(keywords, ids, new Set(rows.map((r) => r.library)));
+    if (keywordProblems.length) {
+        fail(path.relative(REPO_ROOT, KEYWORDS_FILE) + ' has ' + keywordProblems.length + ' problem(s):\n  '
+            + keywordProblems.join('\n  ')
+            + '\nFix the file (or the stencil that was renamed) and rerun.');
+    }
+    applyKeywords(rows, keywords);
+
     /*
      * One row per distinct id for the interpreted-text pass. Rows are sorted, so
      * the first row for an id is the same one on every run, and a consumer that
@@ -547,8 +646,32 @@ function main() {
         return o;
     });
 
+    /*
+     * default_size against the index being replaced, so a change to the size rule
+     * is reviewed rather than discovered. Rows are matched on id, source, file and
+     * library; a row new to the index is not a change.
+     */
+    const indexFile = path.join(opts.out, '_index.json');
+    const sizeChanges = [];
+    if (fs.existsSync(indexFile)) {
+        let previous = null;
+        try { previous = JSON.parse(fs.readFileSync(indexFile, 'utf8')); } catch (e) { warn('the previous ' + indexFile + ' is not valid JSON; default_size changes are not reported'); }
+        if (Array.isArray(previous)) {
+            const rowKey = (r) => [r.id, r.source, r.file, r.library].join('\u0000');
+            const before = new Map(previous.map((r) => [rowKey(r), r.default_size]));
+            for (const r of indexRows) {
+                const k = rowKey(r);
+                if (!before.has(k)) { continue; }
+                if (JSON.stringify(before.get(k)) !== JSON.stringify(r.default_size)) {
+                    sizeChanges.push(r.id + ' (' + r.source + '/' + r.file + ', ' + r.library + '): '
+                        + JSON.stringify(before.get(k)) + ' -> ' + JSON.stringify(r.default_size));
+                }
+            }
+        }
+    }
+
     const results = { written: [], unchanged: [], stale: [] };
-    writeOrCheck(path.join(opts.out, '_index.json'), serialiseIndex(indexRows), opts.check, results);
+    writeOrCheck(indexFile, serialiseIndex(indexRows), opts.check, results);
     writeOrCheck(path.join(opts.out, '_text_syntax.json'), serialiseTextSyntax(textSyntax), opts.check, results);
 
     // --- summary ---
@@ -572,6 +695,10 @@ function main() {
     log('ids        ' + generated + ' carry a generator, ' + interpreting.length + ' interpret their text, '
         + withParams + ' declare parameters, ' + multiSlot + ' have more than one text slot, '
         + titled + ' have a title');
+    log('keywords   ' + indexRows.filter((r) => r.keywords).length + ' rows carry keywords, '
+        + indexRows.filter((r) => r.container).length + ' rows are containers');
+    log('sizes      ' + sizeChanges.length + ' rows changed default_size against the previous index');
+    for (const c of sizeChanges) { log('             ' + c); }
 
     for (const d of dangling) {
         warn('placement "' + d.id + '" in ' + d.source + '/' + d.file + '.json (' + d.library + ') '

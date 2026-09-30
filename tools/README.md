@@ -15,9 +15,10 @@ apps fetch, and they are not regenerated.
 
 | File | What it is |
 |---|---|
-| `stencils/v4/_index.json` | One row per library placement — `id`, `name`, `category`, `group`, `library`, `file`, `source`, `default_size`, `generated`, `interpret_text`, `has_params`, `text_slots`, `has_title`. `has_title` is true when the template has a title: the first `texts` entry whose `external` is one of the strings `"bottom"`, `"top"`, `"left"`, `"right"`. A title is not counted in `text_slots`. The backend holds it in memory and every stencil search filters it. |
+| `stencils/v4/_index.json` | One row per library placement — `id`, `name`, `category`, `group`, `library`, `library_name` (the library's display name), `file`, `source`, `default_size`, `generated`, `interpret_text`, `has_params`, `text_slots`, `has_title`, and, only when set, `keywords` and `container: true`. `default_size` is the placement's params, else the template's params, else the template's `default`, else its `libraryview`. `has_title` is true when the template has a title: the first `texts` entry whose `external` is one of the strings `"bottom"`, `"top"`, `"left"`, `"right"`. A title is not counted in `text_slots`. The backend holds it in memory and every stencil search filters it. |
 | `stencils/v4/_text_syntax.json` | For each template whose generator parses its own text: the separator, the markers, an authored one-line note and a worked example. |
 | `tools/text-syntax-notes.json` | **Hand-authored input.** One short line per interpreting template. |
+| `tools/stencil-keywords.json` | **Hand-authored input.** Search keywords per library and per template id, and the `containers` (libraries and ids) marked `container: true`. The generator validates it and fails, naming the problem, if its shape is wrong or an id or library it names is not in the catalogue. |
 
 Regenerate in the same commit that changes a stencil. Files beginning with `_`
 are outputs and are never themselves indexed; nothing in `lekhcore` requests

@@ -1,0 +1,43 @@
+{
+  "_README": "Authored search keywords for stencils/v4/_index.json. `libraries` maps a library id (library[].id in a stencil file) to keywords given to every row of that library; `templates` maps a template id to keywords for that template's rows. A row's keywords are its library's followed by its template's, de-duplicated. `containers.libraries` and `containers.ids` mark rows `container: true` (shapes meant to hold other shapes; the MCP layout lint treats them as groups, never as obstacles). generate-stencil-index.js VALIDATES this file and FAILS naming the problem when its shape is wrong or when an id or a library it names is not in the catalogue, so a renamed stencil breaks the index build rather than silently losing its keywords. Keys starting with _ are ignored.",
+
+  "libraries": {
+    "avabodh.uml.sequence": ["sequence diagram", "sequence", "interaction", "lifeline", "activation", "execution", "message", "actor"],
+    "avabodh.uml.entityrelationship": ["er diagram", "erd", "entity relationship", "database schema"],
+    "avabodh.uml.class": ["uml class"],
+    "avabodh.uml.usecase": ["use case"],
+    "avabodh.uml.state": ["state machine", "activity"],
+    "avabodh.uml.component": ["uml component"],
+    "avabodh.uml.deployment": ["uml deployment"],
+    "avabodh.dataflow": ["dfd", "data flow"],
+    "avabodh.flowchart": ["flowchart"],
+    "avabodh.bpmn": ["bpmn"],
+    "avabodh.archimate.generic": ["archimate"],
+    "avabodh.archimate.motivation": ["archimate"],
+    "avabodh.archimate.strategy": ["archimate"],
+    "avabodh.archimate.business": ["archimate"],
+    "avabodh.archimate.application": ["archimate"],
+    "avabodh.archimate.technology": ["archimate"],
+    "avabodh.archimate.implementation": ["archimate"]
+  },
+
+  "templates": {
+    "avabodh.uml.activation": ["execution specification", "focus of control"],
+    "avabodh.uml.frame": ["fragment", "combined fragment", "alt", "loop", "opt"],
+    "avabodh.flowchart.start_end": ["terminator", "terminal", "start", "end", "begin", "stop"],
+    "avabodh.flowchart.process": ["step", "action", "task"],
+    "avabodh.flowchart.decision": ["condition", "branch", "if", "choice"],
+    "avabodh.flowchart.input_output": ["data", "io", "input", "output"],
+    "avabodh.container.slh": ["swimlane", "swim lane", "lane"],
+    "avabodh.container.slv": ["swimlane", "swim lane", "lane"],
+    "avabodh.bpmn.hpool": ["swimlane", "pool", "lane"],
+    "avabodh.bpmn.vpool": ["swimlane", "pool", "lane"],
+    "avabodh.bpmn.hlanes": ["swimlane", "pool", "lane"],
+    "avabodh.bpmn.vlanes": ["swimlane", "pool", "lane"]
+  },
+
+  "containers": {
+    "libraries": ["avabodh.container", "aws.groups", "azure.groups", "gcp.groups"],
+    "ids": ["avabodh.bpmn.hpool", "avabodh.bpmn.vpool", "avabodh.bpmn.hlanes", "avabodh.bpmn.vlanes", "avabodh.uml.frame"]
+  }
+}
