@@ -198,21 +198,6 @@ function defaultSize(template, placementParams) {
         || null;
 }
 
-/*
- * The size the backend's MCP create path gives a shape placed without a width
- * and height: the same order WITHOUT the template's `default`, which is the rule
- * default_size followed before template.default was added to it. The backend
- * wraps it into the catalogue entry's params (kashi
- * service/mcp/semantic/catalogue.js), where it overrides the body's `default`,
- * so correcting default_size must not move it: default_size is informational
- * for agents, and what add_node creates is a separate decision. Emitted as
- * `create_size` only on the rows where it differs from default_size (null where
- * there is none, and the body's own `default` then applies).
- */
-function createSize(template, placementParams) {
-    return defaultSize(Object.assign({}, template, { default: null }), placementParams);
-}
-
 function numeric(v) {
     if (typeof v === 'number' && isFinite(v)) { return v; }
     // A template-level param is { value, order, editor } rather than a bare number.
@@ -270,8 +255,6 @@ function generatorOf(template) {
 
 function row(template, placementParams, categ, file, source) {
     const g = generatorOf(template);
-    const size = defaultSize(template, placementParams);
-    const create = createSize(template, placementParams);
     return {
         id: template.id,
         name: typeof template.name === 'string' ? template.name : template.id,
@@ -281,8 +264,7 @@ function row(template, placementParams, categ, file, source) {
         library_name: typeof categ.name === 'string' ? categ.name : (categ.id || ''),
         file: file,
         source: source,
-        default_size: size,
-        ...(JSON.stringify(create) === JSON.stringify(size) ? {} : { create_size: create }),
+        default_size: defaultSize(template, placementParams),
         generated: !!g,
         interpret_text: !!(g && g.interprettext),
         has_params: hasParams(template),
@@ -716,7 +698,6 @@ function main() {
     log('keywords   ' + indexRows.filter((r) => r.keywords).length + ' rows carry keywords, '
         + indexRows.filter((r) => r.container).length + ' rows are containers');
     log('sizes      ' + sizeChanges.length + ' rows changed default_size against the previous index');
-    log('sizes      ' + indexRows.filter((r) => 'create_size' in r).length + ' rows carry a create_size that differs from default_size');
     for (const c of sizeChanges) { log('             ' + c); }
 
     for (const d of dangling) {
