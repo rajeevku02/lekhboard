@@ -46,6 +46,10 @@
         "means": "a literal * at the start of the item"
       },
       {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
+      },
+      {
         "syntax": "\\n",
         "means": "a line break inside the item"
       }
@@ -63,6 +67,10 @@
       {
         "syntax": "\\-item",
         "means": "a literal - at the start of the item"
+      },
+      {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
       }
     ],
     "note": "Each comma-separated item is one crumb, with the arrow between crumbs drawn for you; the last crumb is styled as the current page.",
@@ -84,6 +92,10 @@
       {
         "syntax": "\\*item",
         "means": "a literal * at the start of the item"
+      },
+      {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
       },
       {
         "syntax": "\\n",
@@ -156,11 +168,15 @@
         "means": "a literal * or - at the start of the item"
       },
       {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
+      },
+      {
         "syntax": "\\n",
         "means": "a line break inside the item"
       }
     ],
-    "note": "The first line is the header row and each comma starts a column (\\, is a literal comma); [v] or [^] at the END of a header cell draws a sort chevron, and [ ] [x] [-] [o] [()] at the START of a cell draw check and radio marks. Column widths go on the last line, in braces with one entry per column, such as {0C, 45L, 20R}: L, C or R sets the alignment (left when omitted), a nonzero number is the column's share of the width left over, and 0 fits the column to its text. That line ends the grid — any line after it is dropped.",
+    "note": "The first line is the header row and each comma starts a column; [v] or [^] at the END of a header cell draws a sort chevron, and [ ] [x] [-] [o] [()] at the START of a cell draw check and radio marks. Column widths go on the last line, in braces with one entry per column, such as {0C, 45L, 20R}: L, C or R sets the alignment (left when omitted), a nonzero number is the column's share of the width left over, and 0 fits the column to its text. That line ends the grid — any line after it is dropped.",
     "example": "ID,Name & Job Title[V],Age,Nickname,Option\n1,Name 1\\nCEO,40,nick1,[O]\n2,Name 2\\nCTO,39,nick2,[X]\n*3,Name 3\\nEngineer,32,nick3,[-]\n4,Name 4\\nEngineer,35,nick4,[]\n{0C, 45L, 0R, 15L, 0C}"
   },
   "avabodh.wireframe.iosactionsheet": {
@@ -181,11 +197,15 @@
         "means": "a literal * at the start of the item"
       },
       {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
+      },
+      {
         "syntax": "\\n",
         "means": "a line break inside the item"
       }
     ],
-    "note": "Each comma-separated item is one entry in the floating bar, with a divider drawn between entries; an entry of just > or < is the convention for more entries off to that side, drawn as the character itself, and \\, writes a comma inside an entry.",
+    "note": "Each comma-separated item is one entry in the floating bar, with a divider drawn between entries; an entry of just > or < is the convention for more entries off to that side, drawn as the character itself.",
     "example": "*Select All,Copy,Paste"
   },
   "avabodh.wireframe.iosmenu": {
@@ -220,6 +240,10 @@
         "means": "a literal * or - at the start of the item"
       },
       {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
+      },
+      {
         "syntax": "\\n",
         "means": "a line break inside the item"
       }
@@ -233,6 +257,10 @@
       {
         "syntax": "cell,cell",
         "means": "a comma starts the next column; the markers below apply per cell"
+      },
+      {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
       }
     ],
     "note": "Each line is one row and each comma one wheel column; at most seven lines are kept, and the middle line is the row under the selection bar.",
@@ -248,6 +276,10 @@
       {
         "syntax": "\\*item",
         "means": "a literal * at the start of the item"
+      },
+      {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
       },
       {
         "syntax": "\\n",
@@ -267,6 +299,10 @@
       {
         "syntax": "\\-item",
         "means": "a literal - at the start of the item"
+      },
+      {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
       }
     ],
     "note": "Each comma-separated item is one link in the bar.",
@@ -325,6 +361,10 @@
       {
         "syntax": "\\*item",
         "means": "a literal * or - at the start of the item"
+      },
+      {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
       }
     ],
     "note": "Each line is one row; a line of only -, --, ---, ---- or = draws a separator row; the text after the last comma is right-aligned, which is where an accelerator goes and where > reads as a submenu, so write \\, for a comma that belongs to the left text; [o] and [x] at the start draw a bullet and a check, and any other bracket text is used verbatim as a template name.",
@@ -348,6 +388,10 @@
       {
         "syntax": "\\*item",
         "means": "a literal * or - at the start of the item"
+      },
+      {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
       },
       {
         "syntax": "\\n",
@@ -412,6 +456,10 @@
       {
         "syntax": "\\*item",
         "means": "a literal * or - at the start of the item"
+      },
+      {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
       }
     ],
     "note": "Each comma-separated item is one tab, drawn above or below the panel; which edge the tabs sit on and how they are aligned are template parameters.",
@@ -427,6 +475,10 @@
       {
         "syntax": "\\*item",
         "means": "a literal * at the start of the item"
+      },
+      {
+        "syntax": "\\,",
+        "means": "a literal comma inside the item"
       },
       {
         "syntax": "\\n",
