@@ -41,16 +41,33 @@ the 36 listed legacy Azure/GCP service files with
 `LEKHBOARD_V4_REFRESH=1 make -C svg2lekh lekhboard-clean-retired`; the normal
 target refuses to copy while those stale paths remain. Do not run that cleanup
 after a v4-consuming app ships. A hand edit to generated
-output is lost at the next regeneration. Sixty-one unrelated files remain
-byte-identical to their v3 namesakes. The six `mscae_*.json` files retain their
-paths, IDs and shape data; only their library names/category metadata differ from
-v3. v3 itself remains unchanged, including its 21 old AWS `aws_*.json` files.
+output is lost at the next regeneration. Of the sixty-one unrelated files,
+thirty-five remain byte-identical to their v3 namesakes; the other twenty-six —
+`networks.json`, the ten `office_*.json`, `citrix.json` and the fourteen
+`cisco_*.json` — carry titles (below). The six `mscae_*.json` files retain their
+paths, IDs and shape data; their library names/category metadata differ from v3,
+and they carry titles too. v3 itself remains unchanged, including its 21 old AWS
+`aws_*.json` files.
+
+## Hand-authored titles
+
+Unlike the generated provider files, the titles in `networks.json`, `mscae_*.json`,
+`office_*.json` and `citrix.json` are hand-maintained data. Each template there has
+one `texts` entry, `{"text": <name>, "external": "bottom"}`, with no `location`, and
+`"libraryview": {"text": "\n"}`: the picker swaps a non-empty `libraryview.text` into
+text slot 0 while it draws the thumbnail, which keeps the title from being drawn
+under the icon next to the panel's own label. The title text is the template's name,
+unbroken up to three words, two lines of two for four words, and otherwise a line
+break after every third word. The `cisco_*.json` templates carry an **empty** bottom
+title, appended after any text slots they already had, so a placed Cisco shape can be
+given one without changing its slot indices. Server Rack (`rack_*.json`) carries no
+titles: a mounted unit's title would sit over the unit below it.
 
 ## Two things worth knowing before changing this
 
 **The catalogue has two sources.** `stencils/v4/` is 128 library files: the 28
-generated AWS libraries, 61 unrelated libraries retained from v3, six retained
-MSCAE libraries with metadata-only relabeling, 30 generated Azure libraries and
+generated AWS libraries, 61 unrelated libraries retained from v3 (26 of them now
+titled), six retained MSCAE libraries relabelled and titled, 30 generated Azure libraries and
 three generated GCP libraries; together with the 13 core library files the index
 covers 141 files, 5,872 placements and 5,797 distinct ids. `lekhcore/stencils/core/`
 adds 27 ids this repository does not carry at all, and they are three whole
