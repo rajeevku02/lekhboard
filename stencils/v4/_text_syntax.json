@@ -160,7 +160,7 @@
         "means": "a line break inside the item"
       }
     ],
-    "note": "The first line is the header row and each comma starts a column; [v] or [^] at the END of a header cell draws a sort chevron, [ ] [x] [-] [o] [()] at the START of a cell draw check and radio marks, and a line of the form {0C, 45L, 0R} anywhere in the text sets each column's width and alignment (L, C or R; 0 means share the remaining width).",
+    "note": "The first line is the header row and each comma starts a column (\\, is a literal comma); [v] or [^] at the END of a header cell draws a sort chevron, and [ ] [x] [-] [o] [()] at the START of a cell draw check and radio marks. Column widths go on the last line, in braces with one entry per column, such as {0C, 45L, 20R}: L, C or R sets the alignment (left when omitted), a nonzero number is the column's share of the width left over, and 0 fits the column to its text. That line ends the grid — any line after it is dropped.",
     "example": "ID,Name & Job Title[V],Age,Nickname,Option\n1,Name 1\\nCEO,40,nick1,[O]\n2,Name 2\\nCTO,39,nick2,[X]\n*3,Name 3\\nEngineer,32,nick3,[-]\n4,Name 4\\nEngineer,35,nick4,[]\n{0C, 45L, 0R, 15L, 0C}"
   },
   "avabodh.wireframe.iosactionsheet": {
@@ -185,7 +185,7 @@
         "means": "a line break inside the item"
       }
     ],
-    "note": "Each comma-separated item is one entry in the floating bar, with a divider drawn between entries.",
+    "note": "Each comma-separated item is one entry in the floating bar, with a divider drawn between entries; an entry of just > or < is the convention for more entries off to that side, drawn as the character itself, and \\, writes a comma inside an entry.",
     "example": "*Select All,Copy,Paste"
   },
   "avabodh.wireframe.iosmenu": {
@@ -224,7 +224,7 @@
         "means": "a line break inside the item"
       }
     ],
-    "note": "Each line is one row, with a divider between rows; at the start [o] [x] [+] [-] give a bullet, a check, a plus and a minus, and at the end [>] [=] [on] [off] give a chevron, a hamburger and a toggle — any other bracket text is used verbatim as a template name and will not resolve, so keep to these.",
+    "note": "Each line is one row, with a divider between rows; the text after the last comma is right-aligned, so write \\, for a comma that belongs to the left text; at the start [o] [x] [+] [-] give a bullet, a check, a plus and a minus, and at the end [>] [=] [on] [off] give a chevron, a hamburger and a toggle — any other bracket text is used verbatim as a template name and will not resolve, so keep to these.",
     "example": "A text menu without icon\n[+]Add an Item[>]\n[-]Delete an item\n*Selected item,OK\n-Disabled Item[=]\n[x]Checkmark\n[O]Bullet item\nOn Button[on]\nOff Button[off]\n\n   Another item with spaces"
   },
   "avabodh.wireframe.iospicker": {
@@ -327,7 +327,7 @@
         "means": "a literal * or - at the start of the item"
       }
     ],
-    "note": "Each line is one row; a line of only -, --, ---, ---- or = draws a separator row; the text after the last comma is right-aligned, which is where an accelerator goes and where > reads as a submenu; [o] and [x] at the start draw a bullet and a check, and any other bracket text is used verbatim as a template name.",
+    "note": "Each line is one row; a line of only -, --, ---, ---- or = draws a separator row; the text after the last comma is right-aligned, which is where an accelerator goes and where > reads as a submenu, so write \\, for a comma that belongs to the left text; [o] and [x] at the start draw a bullet and a check, and any other bracket text is used verbatim as a template name.",
     "example": "Open,CTRL+O\n*Open Recent,>\n---\n[O]Option One\nOption Two\n=\n[x]Toggle Item\n-Disabled Item\nExit,CTRL+Q"
   },
   "avabodh.wireframe.menubar": {
