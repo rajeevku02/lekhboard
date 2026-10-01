@@ -415,6 +415,7 @@ function markersFor(flags) {
     } else if (flags.checkDisabled) {
         markers.push({ syntax: '\\-item', means: 'a literal - at the start of the item' });
     }
+    if (flags.escapeComma) { markers.push({ syntax: '\\,', means: 'a literal comma inside the item' }); }
     if (flags.checkEscapeNewLine) { markers.push({ syntax: '\\n', means: 'a line break inside the item' }); }
     return markers;
 }
@@ -458,6 +459,11 @@ function buildTextSyntax(interpreting, luaRoot, notes, warn) {
                         if (f !== 'by' && c[f]) { flags[f] = true; }
                     }
                 }
+                // The host's splitByChar reads \<separator> as a literal separator,
+                // and checkEndText splits the right-aligned text off at a comma the
+                // same way. Only the comma is reported: \/ in a date would be true
+                // but never something to write.
+                if (calls.some((c) => c.by === ',' || c.checkEndText)) { flags.escapeComma = true; }
                 markers = markersFor(flags);
                 if (splitsLines) {
                     const inner = calls.find((c) => c.by && c.by !== '\n');
