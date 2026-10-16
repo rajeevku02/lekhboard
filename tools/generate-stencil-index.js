@@ -48,6 +48,7 @@ const path = require('path');
 const REPO_ROOT = path.resolve(__dirname, '..');
 const DEFAULT_PUBLISHED_DIR = path.join(REPO_ROOT, 'stencils', 'v4');
 const NOTES_FILE = path.join(__dirname, 'text-syntax-notes.json');
+const LUA_SOURCES_FILE = path.join(__dirname, 'wireframe-lua-sources.json');
 const KEYWORDS_FILE = path.join(__dirname, 'stencil-keywords.json');
 
 /* The core files that are NOT catalogues. They carry no `library` array and are
@@ -427,6 +428,29 @@ function luaSourceFor(luaRoot, scriptFile) {
     return path.join(luaRoot, 'wireframe_src', base);
 }
 
+/*
+ * The Lua source a generator was written in. A v2.2.x-v4 template names it by
+ * `scriptfile`; a v5 template carries the JS text instead (lekhjs ports every
+ * Lua script, spec 04 §8), so the source is found by template id through the
+ * frozen tools/wireframe-lua-sources.json. Either way the syntax is derived
+ * from the same Lua source, which is why v5's _text_syntax.json equals v4's.
+ */
+let luaSourcesCache = null;
+function luaSources() {
+    // Read only when a template has no scriptfile (a v5 folder), so the map is
+    // not needed to index v4.
+    if (luaSourcesCache === null) { luaSourcesCache = readJson(LUA_SOURCES_FILE); }
+    return luaSourcesCache;
+}
+
+function luaSourceOf(luaRoot, id, g) {
+    if (g.scriptfile) { return luaSourceFor(luaRoot, g.scriptfile); }
+    if (typeof g.script !== 'string' || !/^\/\*lekh-js:\d+:[a-z0-9/_-]+\*\//.test(g.script)) { return null; }
+    const map = luaSources();
+    const name = Object.prototype.hasOwnProperty.call(map, id) && !id.startsWith('_') ? map[id] : null;
+    return typeof name === 'string' ? path.join(luaRoot, 'wireframe_src', name) : null;
+}
+
 function buildTextSyntax(interpreting, luaRoot, notes, warn) {
     const out = {};
     const missing = [];
@@ -436,8 +460,8 @@ function buildTextSyntax(interpreting, luaRoot, notes, warn) {
         let separator = 'none';
         let markers = [];
 
-        if (g.scriptfile) {
-            const src = luaSourceFor(luaRoot, g.scriptfile);
+        const src = luaSourceOf(luaRoot, r.id, g);
+        if (src) {
             if (!fs.existsSync(src)) {
                 fail('the Lua source for ' + r.id + ' is missing: ' + src + '\n'
                     + 'stencils/lua/ holds each script twice, as a source and as the minified copy '

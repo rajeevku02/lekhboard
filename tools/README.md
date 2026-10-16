@@ -1,7 +1,8 @@
 # tools
 
-This repository has no build step — publishing is a push — with one exception:
-the generated files in `stencils/v4/`, the current published folder.
+This repository has no build step — publishing is a push — with two exceptions:
+the generated index files in `stencils/v4/`, the current published folder, and
+the derived `stencils/v5/` folder (below).
 
 ```sh
 node tools/generate-stencil-index.js          # rewrite stencils/v4/_index.json and _text_syntax.json
@@ -86,3 +87,43 @@ flags the Lua script passes to the host's `split()` — the only syntax the C++
 menu's `---` separator row, the tree's icon names, the datagrid's column spec. So
 the generator **fails** when a template has `interprettext: true` and no entry in
 `tools/text-syntax-notes.json`.
+
+## `stencils/v5` — the folder the TypeScript apps read
+
+`stencils/v5/` is **derived**, never edited: it is `v4` with every Lua generator
+replaced by the JS text of the lekhjs module that serves its template id (Work
+01M4X7TCHFB862XGT68GPY071C, spec 04 §8). The TS apps (lekhjs `StencilSource`)
+and, after the MCP switch, the backend read it; the C++ apps keep reading
+`v2.2.x`, `v3` and `v4`, which therefore stay **frozen** with their Lua
+`scriptfile`s.
+
+```sh
+node tools/build-v5.js            # rewrite stencils/v5 from stencils/v4
+node tools/build-v5.js --check    # fail if stencils/v5 is not a fresh derivation of v4
+```
+
+Defaults: `--from stencils/v4 --to stencils/v5 --scripts
+../lekhjs/src/generators/scripts.generated.json` (the canonical JS texts lekhjs
+commits; lekhboard depends on nothing else from lekhjs).
+
+- Every `v4` file is copied **byte for byte**, except a file holding a Lua
+  generator (`scriptfile`, or a non-JS `script`) — today only `wireframe.json`.
+  There only the `generator` objects are rewritten, in place in the text:
+  `script` becomes `/*lekh-js:1:<key>*/…`, `scriptfile` and `type` go, and
+  `text`, `interprettext` and `embedrefs` are kept (in that order, after
+  `script`). The tool re-parses its output and refuses to write it unless it is
+  exactly the converted document.
+- The module key comes from the **template id**, through the frozen
+  `tools/wireframe-lua-sources.json` (id → Lua source; key
+  `wireframe/<source without .lua>`). A Lua generator under an id that is not
+  there, or a key with no canonical text, **fails** the build.
+- `_index.json` and `_text_syntax.json` are regenerated with
+  `generate-stencil-index.js --published stencils/v5` and must equal `v4`'s byte
+  for byte, else the build fails. Since a v5 template has no `scriptfile`, the
+  index generator finds its Lua source (for the derived text syntax) through the
+  same `wireframe-lua-sources.json`.
+
+Until the TS cutover, edit `v4` and rerun `build-v5.js` in the same commit;
+`--check` belongs in every push. After the TS release ships, `v5` becomes the
+only folder edited and `--check` is replaced by a check that no `v5` file holds
+a Lua generator.
