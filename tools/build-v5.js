@@ -412,15 +412,33 @@ function compareDirs(a, b) {
     return diffs;
 }
 
+// Make `to` hold exactly the files of `from`, writing only the files that differ.
+function syncDir(from, to) {
+    fs.mkdirSync(to, { recursive: true });
+    const names = fs.readdirSync(from);
+    for (const name of names) {
+        const out = fs.readFileSync(path.join(from, name));
+        const dst = path.join(to, name);
+        if (!(fs.existsSync(dst) && fs.readFileSync(dst).equals(out))) { fs.writeFileSync(dst, out); }
+    }
+    for (const name of fs.readdirSync(to)) {
+        if (!names.includes(name)) { fs.rmSync(path.join(to, name)); }
+    }
+}
+
 function main() {
     const opts = parseArgs(process.argv.slice(2));
     const log = opts.quiet ? () => {} : (s) => process.stdout.write(s + '\n');
+    // Always derive into a temporary folder first: a failed build (fail() exits) leaves --to
+    // untouched, never half written (AC-GEN-14). The exit hook also removes the folder then.
+    const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'lekhboard-v5-'));
+    process.on('exit', () => fs.rmSync(tmp, { recursive: true, force: true }));
     if (!opts.check) {
-        build(opts, opts.to, log);
+        build(opts, tmp, log);
+        syncDir(tmp, opts.to);
         log('wrote      ' + path.relative(REPO_ROOT, opts.to));
         return;
     }
-    const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'lekhboard-v5-'));
     try {
         build(opts, tmp, log);
         const diffs = compareDirs(tmp, opts.to);
