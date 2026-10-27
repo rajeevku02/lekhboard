@@ -22,8 +22,7 @@ apps fetch, and they are not regenerated.
 | `tools/stencil-keywords.json` | **Hand-authored input.** Search keywords per library and per template id, and the `containers` (libraries and ids) marked `container: true`. The generator validates it and fails, naming the problem, if its shape is wrong or an id or library it names is not in the catalogue. |
 
 Regenerate in the same commit that changes a stencil. Files beginning with `_`
-are outputs and are never themselves indexed; nothing in `lekhcore` requests
-them, so no app fetches them.
+are outputs and are never themselves indexed; no app requests them.
 
 ## The cloud-provider files are generated — do not hand-edit them
 
@@ -70,15 +69,31 @@ titles: a mounted unit's title would sit over the unit below it.
 generated AWS libraries, 61 unrelated libraries retained from v3 (26 of them now
 titled), six retained MSCAE libraries relabelled and titled, 30 generated Azure libraries and
 three generated GCP libraries; together with the 13 core library files the index
-covers 141 files, 5,872 placements and 5,797 distinct ids. `lekhcore/stencils/core/`
-adds 27 ids this repository does not carry at all, and they are three whole
-categories — **Basic**, **Container** and **Arrow**.
-`avabodh.basic.rectangle` and `avabodh.container.slv` are core-only, so an index
-built from this repository alone leaves an agent unable to place a plain box or a
-swimlane. The generator therefore **reads** `../lekhcore/stencils/core` (override
-with `--core`, or `LEKHCORE_STENCILS`) and **does not copy it**, and it **fails**
-rather than writing a catalogue without those shapes. Where an id is in both
-sources the published definition wins.
+covers 141 files, 5,872 placements and 5,797 distinct ids. The core set adds 27
+ids `stencils/v4` does not carry at all, and they are three whole categories —
+**Basic**, **Container** and **Arrow**. `avabodh.basic.rectangle` and
+`avabodh.container.slv` are core-only, so an index built from the published
+folder alone leaves an agent unable to place a plain box or a swimlane. Where an
+id is in both sources the published definition wins.
+
+**The generator reads nothing outside this repository.** Its two non-published
+inputs are committed here, in `tools/core-stencils/`:
+
+| Folder | What it is |
+|---|---|
+| `tools/core-stencils/core/` | The core stencil set: 16 JSON files, 13 carrying a `library` array (`connection_arrows.json`, `templates.json` and `libnames.json` are not catalogues). |
+| `tools/core-stencils/lua/wireframe_src/` | The 34 wireframe Lua generator sources, scanned for their `split()` flags to derive `_text_syntax.json`'s separators and markers. |
+
+Both were copied byte for byte from the C++ core repository (`lekhcore` `b8d8edc`,
+`stencils/core/` and `stencils/lua/wireframe_src/`), which is being retired; from
+then on these copies are the source. The C++ apps and the TS apps embed their own
+copies of the core set, so a change here does not reach an app by itself.
+`--core <dir>` (and `--lua <dir>`, default `<core>/../lua`) point the generator
+at another copy, for tests; the generator **fails**, naming the path, if the core
+set, one of `basic.json`/`container.json`/`arrow.json`, or a Lua source is
+missing, and it fails rather than write a catalogue without the core-only shapes.
+`node tools/check-self-contained.js` fails if any tool names a sibling
+repository's path.
 
 **A note is not optional.** The separator and the markers are derived from the
 flags the Lua script passes to the host's `split()` — the only syntax the C++

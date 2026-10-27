@@ -9,16 +9,18 @@
  * The catalogue is two sets, not one:
  *
  *   published  lekhboard/stencils/v4/*.json          128 files
- *   core       lekhcore/stencils/core/*.json         the files that carry a
+ *   core       tools/core-stencils/core/*.json       the files that carry a
  *                                                    `library` array (13 today)
  *
  * Three whole categories — Basic, Container and Arrow — exist ONLY in the core
  * set. `avabodh.basic.rectangle` and `avabodh.container.slv` are core-only, so
  * an index built from the published set alone leaves an agent unable to place a
- * plain box or a swimlane. This script therefore READS lekhcore; it does not
- * copy it, because a copy is the hand-refreshed duplicate the workspace's
- * source-of-truth rules warn about. If the core source has moved it FAILS
- * rather than publishing a catalogue without a rectangle.
+ * plain box or a swimlane. The core set and the Lua generator sources the
+ * text syntax is derived from are committed in THIS repository, under
+ * tools/core-stencils/ (core/ and lua/wireframe_src/): the core engine they came
+ * from is being retired, so lekhboard holds them and reads nothing outside
+ * itself. If an input is missing the script FAILS rather than publishing a
+ * catalogue without a rectangle.
  *
  * Where an id is in both sources the PUBLISHED definition wins, because that is
  * the one the apps' pickers serve.
@@ -32,14 +34,13 @@
  *   node tools/generate-stencil-index.js [options]
  *
  *     --published <dir>  the published folder to index (default: stencils/v4)
- *     --core <dir>   lekhcore/stencils/core  (default: ../lekhcore/stencils/core)
- *     --lua  <dir>   lekhcore/stencils/lua   (default: <core>/../lua)
+ *     --core <dir>   the core set            (default: tools/core-stencils/core)
+ *     --lua  <dir>   the Lua sources' parent (default: <core>/../lua, which
+ *                    holds wireframe_src/)
  *     --out  <dir>   where to write          (default: the --published folder)
  *     --check        regenerate and diff against what is in --out; write
  *                    nothing and exit non-zero if they differ
  *     --quiet        only print the summary
- *
- * Environment: LEKHCORE_STENCILS may supply the core directory instead of --core.
  */
 
 const fs = require('fs');
@@ -50,6 +51,7 @@ const DEFAULT_PUBLISHED_DIR = path.join(REPO_ROOT, 'stencils', 'v4');
 const NOTES_FILE = path.join(__dirname, 'text-syntax-notes.json');
 const LUA_SOURCES_FILE = path.join(__dirname, 'wireframe-lua-sources.json');
 const KEYWORDS_FILE = path.join(__dirname, 'stencil-keywords.json');
+const DEFAULT_CORE_DIR = path.join(__dirname, 'core-stencils', 'core');
 
 /* The core files that are NOT catalogues. They carry no `library` array and are
  * listed by name so that a core file which unexpectedly loses its library is a
@@ -77,7 +79,7 @@ function fail(message) {
 
 function parseArgs(argv) {
     const opts = {
-        core: process.env.LEKHCORE_STENCILS || path.resolve(REPO_ROOT, '..', 'lekhcore', 'stencils', 'core'),
+        core: DEFAULT_CORE_DIR,
         lua: null,
         published: DEFAULT_PUBLISHED_DIR,
         out: null,
@@ -422,8 +424,8 @@ function markersFor(flags) {
 }
 
 function luaSourceFor(luaRoot, scriptFile) {
-    // "wireframe/menu_min.lua" is the minified copy the pack is built from.
-    // Each script is in stencils/lua/ twice; scan the SOURCE.
+    // "wireframe/menu_min.lua" is the minified copy the C++ apps' Lua pack is
+    // built from; only the SOURCE (wireframe_src/menu.lua) is committed here.
     const base = path.basename(scriptFile).replace(/_min\.lua$/, '.lua');
     return path.join(luaRoot, 'wireframe_src', base);
 }
@@ -464,8 +466,8 @@ function buildTextSyntax(interpreting, luaRoot, notes, warn) {
         if (src) {
             if (!fs.existsSync(src)) {
                 fail('the Lua source for ' + r.id + ' is missing: ' + src + '\n'
-                    + 'stencils/lua/ holds each script twice, as a source and as the minified copy '
-                    + 'named by the template. The derived syntax is scanned from the source.');
+                    + 'A v4 template names the minified copy; the derived syntax is scanned from the '
+                    + 'source of the same name, committed under tools/core-stencils/lua/wireframe_src.');
             }
             const source = fs.readFileSync(src, 'utf8');
             const calls = parseSplitCalls(source);
@@ -567,9 +569,9 @@ function main() {
     if (!fs.existsSync(opts.core) || !fs.statSync(opts.core).isDirectory()) {
         fail('the core catalogue is missing: ' + opts.core + '\n'
             + 'The index covers BOTH sources. Basic, Container and Arrow — a plain rectangle, '
-            + 'a swimlane, a standalone arrow — exist only in lekhcore/stencils/core, so an index '
+            + 'a swimlane, a standalone arrow — exist only in the core set, so an index '
             + 'built without it would be published missing the shapes a model reaches for first.\n'
-            + 'Point --core (or LEKHCORE_STENCILS) at lekhcore/stencils/core.');
+            + 'The core set is committed at ' + path.relative(REPO_ROOT, DEFAULT_CORE_DIR) + '; restore it from git.');
     }
     for (const required of CORE_REQUIRED) {
         if (!fs.existsSync(path.join(opts.core, required))) {
@@ -580,7 +582,8 @@ function main() {
     }
     if (!fs.existsSync(path.join(opts.lua, 'wireframe_src'))) {
         fail('the Lua sources are missing: ' + path.join(opts.lua, 'wireframe_src') + '\n'
-            + 'The interpreted-text syntax is derived from the split() flags in those sources.');
+            + 'The interpreted-text syntax is derived from the split() flags in those sources, '
+            + 'committed at tools/core-stencils/lua/wireframe_src; restore them from git.');
     }
 
     const publishedFiles = stencilFiles(opts.published);

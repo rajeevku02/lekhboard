@@ -1,5 +1,5 @@
 {
-  "_comment": "FROZEN. Template id -> the Lua source (lekhcore/stencils/lua/wireframe_src/<name>) its generator was written in. stencils/v5 carries JS generators with no scriptfile, so generate-stencil-index.js finds the Lua source here to derive _text_syntax.json, and build-v5.js maps an id to its lekhjs module key wireframe/<name without .lua>. Re-derived from stencils/v4/wireframe.json; never edit by hand.",
+  "_comment": "FROZEN. Template id -> the Lua source (tools/core-stencils/lua/wireframe_src/<name>) its generator was written in. stencils/v5 carries JS generators with no scriptfile, so generate-stencil-index.js finds the Lua source here to derive _text_syntax.json, and build-v5.js maps an id to its lekhjs module key wireframe/<name without .lua>. Re-derived from stencils/v4/wireframe.json; never edit by hand.",
   "avabodh.wireframe.calendar": "calendar.lua",
   "avabodh.wireframe.androiddatepicker": "android_datepicker.lua",
   "avabodh.wireframe.androidtabbar": "android_tabbar.lua",
