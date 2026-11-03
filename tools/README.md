@@ -1,8 +1,22 @@
 # tools
 
 This repository has no build step — publishing is a push — with two exceptions:
-the generated index files in `stencils/v4/`, the current published folder, and
-the derived `stencils/v5/` folder (below).
+the generated index files of a published folder, and the derived `stencils/v5/`
+folder (below). The folder the current apps read, and the one edited, is
+**`stencils/v6/`** (below); `v5` and older are frozen.
+
+## Before every push
+
+```sh
+node tools/check-templates.js                                    # the stencil check over stencils/v6
+node tools/generate-stencil-index.js --check --published stencils/v6
+node tools/build-v5.js --check                                   # v5 is still v4's derivation
+node tools/check-self-contained.js
+node --test tools/*.test.js                                      # the tools' own tests
+```
+
+Each exits non-zero on a failure. `git diff --stat` against the last push must
+show nothing under `stencils/v2*`, `v3`, `v4` or `v5`.
 
 ```sh
 node tools/generate-stencil-index.js          # rewrite stencils/v4/_index.json and _text_syntax.json
@@ -142,3 +156,46 @@ Until the TS cutover, edit `v4` and rerun `build-v5.js` in the same commit;
 `--check` belongs in every push. After the TS release ships, `v5` becomes the
 only folder edited and `--check` is replaced by a check that no `v5` file holds
 a Lua generator.
+
+## `stencils/v6` — the folder that is edited (Work 01M4X17CA0RM6T0ZMK4J9VBA1X)
+
+An existing `stencils/vN` folder is **never edited**: installed apps download
+from it, and a changed file reaches them with no app release. So a published
+change goes into a new folder:
+
+1. `stencils/v6/` was made as a byte copy of `v5` (`cp -a stencils/v5
+   stencils/v6`), committed on its own.
+2. Then `v6` was edited directly: a closed `bound` on
+   `avabodh.flowchart.multiple_documents`, `avabodh.flowchart.collate`,
+   `avabodh.misc.node`, `avabodh.misc.package` and `avabodh.misc.component`, so
+   a connector end lands on the whole outline (each `bound` uses only `data`
+   points the template's `draw` paths already use).
+3. Its index files are regenerated in the same commit:
+   `node tools/generate-stencil-index.js --published stencils/v6`. A row carries
+   `ports` and `connect` when its template sets them (copied as written).
+
+The apps read `v6` once lekhjs `STENCIL_LIB_VERSION` is `'v6'`. `v6` is edited
+directly — no tool derives it, and `build-v5.js` does not touch it — until it
+is released. **The next published change after that makes `v7` the same way**:
+copy `v6` to `v7` in one commit, edit `v7`, regenerate `v7`'s index, and move
+`STENCIL_LIB_VERSION` (and every consumer of the folder name) to `v7`.
+
+### `check-templates.js` — the stencil check
+
+```sh
+node tools/check-templates.js [dir…]    # default: stencils/v6
+```
+
+Checks every template of every library file in each folder (the `_*.json`
+outputs are skipped) and exits 1 with one line per failure — file, template id,
+code. The codes: `port_without_id`, `port_duplicate_id`,
+`port_index_out_of_range`, `port_dir_unknown`, `connect_value_unknown`,
+`connect_ports_without_ports`, and `boundary_not_closed` (the template sets
+`primitive_for_intersection`, has no `bound`, and its first draw path is not
+closed; a template the engine never connects to — an open polygon, an open path
+template or a Bézier curve with no `connect` and no port, or `connect: "none"` —
+is exempt). The engine keeps the same rules in its own module; this is
+lekhboard's copy, and both suites share the fixtures in
+`tools/fixtures/check-templates/` by content. Its tests:
+`node --test tools/*.test.js` (Node 22 and later take test globs, not a bare
+folder).

@@ -1,0 +1,24 @@
+{
+  "library": [
+    {
+      "name": "boundary_not_closed",
+      "id": "test.check.boundary_not_closed",
+      "group": "Test",
+      "category": "Test",
+      "objects": [
+        {
+          "template": {
+            "id": "test.check.boundary_not_closed",
+            "data": ["-w/2", "-h/2", "w/2", "-h/2", "w/2", "h/2"],
+            "draw": ["M 0 1 L 2 3 L 4 5"],
+            "primitive_for_intersection": true
+          },
+          "params": {
+            "width": 100,
+            "height": 60
+          }
+        }
+      ]
+    }
+  ]
+}
