@@ -256,6 +256,19 @@ function generatorOf(template) {
     return (g && typeof g === 'object') ? g : null;
 }
 
+/*
+ * `ports` and `connect` (Work 01M4X17C spec 04 §1, 06 §1), only when the
+ * template sets them, copied as written: `ports` the array of
+ * `{ id, x, y, dir? }` (x, y are indices into `data`), `connect` the string.
+ * No shipped template sets either, so v4 and v5 rows are unchanged.
+ */
+function connectFields(template) {
+    const out = {};
+    if (Array.isArray(template.ports)) { out.ports = template.ports; }
+    if (typeof template.connect === 'string') { out.connect = template.connect; }
+    return out;
+}
+
 function row(template, placementParams, categ, file, source) {
     const g = generatorOf(template);
     return {
@@ -273,6 +286,7 @@ function row(template, placementParams, categ, file, source) {
         has_params: hasParams(template),
         text_slots: textSlots(template),
         has_title: titleIndex(template) !== -1,
+        ...connectFields(template),
         _template: template,
     };
 }
