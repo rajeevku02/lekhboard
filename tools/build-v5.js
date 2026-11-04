@@ -6,8 +6,10 @@
  * replaced by the canonical JS text of the lekhjs module that serves its
  * template id (spec 04 §7.2, §8 of Work 01M4X7TCHFB862XGT68GPY071C).
  *
- * v5 is what the TypeScript apps and the lekhjs backend read. v2.2.x, v3 and v4
- * stay frozen with their Lua `scriptfile`s: they are what the C++ apps download.
+ * v5 is what the lekhjs 3.6.x apps read; it is frozen now, and the current apps
+ * and the backend read stencils/v6 (Work 01M4X17CA0RM6T0ZMK4J9VBA1X), so this
+ * tool is only run with --check, to prove v5 unchanged. v2.2.x, v3 and v4 stay
+ * frozen with their Lua `scriptfile`s: they are what the C++ apps download.
  *
  *   - Every file of the source folder is copied BYTE FOR BYTE, except a file
  *     holding a generator in script form that is not JS (a `scriptfile`, or a
