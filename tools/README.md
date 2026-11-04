@@ -19,19 +19,21 @@ Each exits non-zero on a failure. `git diff --stat` against the last push must
 show nothing under `stencils/v2*`, `v3`, `v4` or `v5`.
 
 ```sh
-node tools/generate-stencil-index.js          # rewrite stencils/v4/_index.json and _text_syntax.json
-node tools/generate-stencil-index.js --check  # fail if they are out of date
+node tools/generate-stencil-index.js --published stencils/v6          # rewrite stencils/v6/_index.json and _text_syntax.json
+node tools/generate-stencil-index.js --check --published stencils/v6  # fail if they are out of date
 ```
 
-`--published <dir>` indexes another folder (default `stencils/v4`); `--out`
-defaults to the same folder. `stencils/v3/_index.json` and
-`stencils/v3/_text_syntax.json` are **frozen**: v3 is what already-published
-apps fetch, and they are not regenerated.
+`--published <dir>` names the folder to index; `--out` defaults to the same
+folder. **Always pass `--published stencils/v6`** (the folder being edited):
+the default, `stencils/v4`, is left over from when v4 was the edited folder,
+and v4 is frozen now, so rewriting its index would change a folder installed
+apps download. The index files of every frozen folder (`v2.2.x`, `v3`, `v4`,
+`v5`) are never regenerated.
 
 | File | What it is |
 |---|---|
-| `stencils/v4/_index.json` | One row per library placement — `id`, `name`, `category`, `group`, `library`, `library_name` (the library's display name), `file`, `source`, `default_size`, `generated`, `interpret_text`, `has_params`, `text_slots`, `has_title`, and, only when set, `keywords` and `container: true`. `default_size` is the placement's params, else the template's params, else the template's `default`, else its `libraryview`. `has_title` is true when the template has a title: the first `texts` entry whose `external` is one of the strings `"bottom"`, `"top"`, `"left"`, `"right"`. A title is not counted in `text_slots`. The backend holds it in memory and every stencil search filters it. |
-| `stencils/v4/_text_syntax.json` | For each template whose generator parses its own text: the separator, the markers, an authored one-line note and a worked example. |
+| `<folder>/_index.json` (today `stencils/v6`) | One row per library placement — `id`, `name`, `category`, `group`, `library`, `library_name` (the library's display name), `file`, `source`, `default_size`, `generated`, `interpret_text`, `has_params`, `text_slots`, `has_title`, and, only when set, `keywords`, `container: true`, `ports` and `connect`. `default_size` is the placement's params, else the template's params, else the template's `default`, else its `libraryview`. `has_title` is true when the template has a title: the first `texts` entry whose `external` is one of the strings `"bottom"`, `"top"`, `"left"`, `"right"`. A title is not counted in `text_slots`. The backend holds it in memory and every stencil search filters it. |
+| `<folder>/_text_syntax.json` | For each template whose generator parses its own text: the separator, the markers, an authored one-line note and a worked example. |
 | `tools/text-syntax-notes.json` | **Hand-authored input.** One short line per interpreting template. |
 | `tools/stencil-keywords.json` | **Hand-authored input.** Search keywords per library and per template id, and the `containers` (libraries and ids) marked `container: true`. The generator validates it and fails, naming the problem, if its shape is wrong or an id or library it names is not in the catalogue. |
 
@@ -50,7 +52,8 @@ make -C svg2lekh lekhboard      # writes aws_*.json, azure_*.json and gcp_*.json
 ```
 
 (`LEKHBOARD_V4=<dir>` overrides the destination), then rerun the index generator
-in the same commit. For an explicitly authorized provider refresh, remove only
+in the same commit. Its default destination is `stencils/v4`, which is frozen:
+point `LEKHBOARD_V4` at the folder being edited (`stencils/v6`). For an explicitly authorized provider refresh, remove only
 the 36 listed legacy Azure/GCP service files with
 `LEKHBOARD_V4_REFRESH=1 make -C svg2lekh lekhboard-clean-retired`; the normal
 target refuses to copy while those stale paths remain. Do not run that cleanup
@@ -152,10 +155,11 @@ commits; lekhboard depends on nothing else from lekhjs).
   index generator finds its Lua source (for the derived text syntax) through the
   same `wireframe-lua-sources.json`.
 
-Until the TS cutover, edit `v4` and rerun `build-v5.js` in the same commit;
-`--check` belongs in every push. After the TS release ships, `v5` becomes the
-only folder edited and `--check` is replaced by a check that no `v5` file holds
-a Lua generator.
+`v4` and `v5` are **frozen** now (Work 01M4X17CA0RM6T0ZMK4J9VBA1X): neither is
+edited and `build-v5.js` is never rerun to write. Installed apps download both,
+and a changed file would reach them with no app release. `build-v5.js --check`
+stays in the pre-push list only to prove that `v5` is still exactly its
+derivation of `v4`. A stencil change goes into `v6` (below).
 
 ## `stencils/v6` — the folder that is edited (Work 01M4X17CA0RM6T0ZMK4J9VBA1X)
 
